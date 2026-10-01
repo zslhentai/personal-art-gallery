@@ -1,6 +1,7 @@
 export interface Artwork {
   id: string;
   slug: string;
+  curationOrder: number;
   titleZh: string;
   titleOriginal: string;
   artist: string;

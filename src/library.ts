@@ -1,6 +1,7 @@
 import data from "./data/artworks.json";
 import type { Artwork, PersonalLibrary } from "./types";
-export const artworks: Artwork[] = data;
+import { canonicalTag, curateArtworks } from "./curation";
+export const artworks: Artwork[] = curateArtworks(data);
 export const libraryKey = "personal-art-gallery:library:v1";
 export const themeKey = "personal-art-gallery:theme:v1";
 export function readLibrary(): PersonalLibrary {
@@ -45,11 +46,13 @@ export function decade(artwork: Artwork) {
   return `${Math.floor(artwork.yearStart / 10) * 10}年代`;
 }
 export function filterArtworks(items: Artwork[], params: URLSearchParams) {
+  // Previously shared tag URLs remain useful after vocabulary cleanup.
+  const tag = canonicalTag(params.get("tag") || "");
   return items.filter(
     (a) =>
       (!params.get("artist") || a.artistSlug === params.get("artist")) &&
       (!params.get("movement") || a.movement === params.get("movement")) &&
       (!params.get("decade") || decade(a) === params.get("decade")) &&
-      (!params.get("tag") || a.tags.includes(params.get("tag")!)),
+      (!tag || a.tags.includes(tag)),
   );
 }

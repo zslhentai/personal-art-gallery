@@ -814,6 +814,13 @@ img {
   color: var(--muted);
   margin-top: 16px;
 }
+.index-label .artist-wall-label {
+  line-height: 1.85;
+}
+.artist-wall-label span {
+  display: block;
+  margin-bottom: 5px;
+}
 .index-item:hover .index-label h2 {
   text-decoration: underline;
   text-underline-offset: 5px;

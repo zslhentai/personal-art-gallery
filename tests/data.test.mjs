@@ -80,6 +80,9 @@ test("GitHub Pages entry uses the repository base path and static hash routes", 
 test("artwork additions fail on missing rights/download flag, duplicate ids and invalid ratios", () => {
   for (const patch of [
     { downloadable: undefined },
+    { curationOrder: undefined },
+    { curationOrder: 0 },
+    { curationOrder: 1.5 },
     { rights: "" },
     { downloadable: true, rights: "Unknown" },
     { aspectRatio: 2 },

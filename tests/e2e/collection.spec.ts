@@ -14,8 +14,9 @@ test("expanded artists and mood tags index the complete collection; random inclu
     await page.goto(base);
     await page.evaluate((value) => { Math.random = () => value; }, (index + 0.5) / artworks.length);
     await page.getByRole("button", { name: "随机看一幅作品" }).click();
-    await expect(page).toHaveURL(new RegExp(`/artwork/${artworks[index].slug}$`));
-    await expect(page.getByRole("heading", { name: artworks[index].titleZh, exact: true })).toBeVisible();
+    const exhibition = [...artworks].sort((a, b) => a.curationOrder - b.curationOrder);
+    await expect(page).toHaveURL(new RegExp(`/artwork/${exhibition[index].slug}$`));
+    await expect(page.getByRole("heading", { name: exhibition[index].titleZh, exact: true })).toBeVisible();
   }
 });
 

@@ -4,6 +4,7 @@ export function validateArtworks(value: unknown): void {
   const ids = new Set();
   const slugs = new Set();
   const images = new Set();
+  const orders = new Set();
   const artists = new Map();
   for (const artwork of value) {
     if (!artwork || typeof artwork !== "object")
@@ -36,6 +37,13 @@ export function validateArtworks(value: unknown): void {
       throw new Error(`${artwork.id}: duplicate id or slug`);
     ids.add(artwork.id);
     slugs.add(artwork.slug);
+    if (
+      !Number.isSafeInteger(artwork.curationOrder) ||
+      artwork.curationOrder <= 0 ||
+      orders.has(artwork.curationOrder)
+    )
+      throw new Error(`${artwork.id}: curationOrder must be a unique positive integer`);
+    orders.add(artwork.curationOrder);
     const artistName = `${artwork.artist}|${artwork.artistZh}`;
     if (artists.has(artwork.artistSlug) && artists.get(artwork.artistSlug) !== artistName)
       throw new Error(`${artwork.id}: inconsistent artist names`);

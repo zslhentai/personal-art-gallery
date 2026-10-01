@@ -1,0 +1,44 @@
+[
+  {
+    "artistSlug": "claude-monet",
+    "lifespan": "1840–1926",
+    "description": "在花园、水面与城市之间，反复捕捉光线改变的一瞬。",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q296"
+  },
+  {
+    "artistSlug": "vincent-van-gogh",
+    "lifespan": "1853–1890",
+    "description": "以鲜明色彩与有力笔触，将日常风景画成内心的回声。",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q5582"
+  },
+  {
+    "artistSlug": "vilhelm-hammersh-i",
+    "lifespan": "1864–1916",
+    "description": "灰色的房间、窗光与背影，让寻常室内留下漫长的安静。",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q380706"
+  },
+  {
+    "artistSlug": "johannes-vermeer",
+    "lifespan": "1632–1675",
+    "description": "让窗边的光落在人物与器物上，凝住日常生活的片刻。",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q41264"
+  },
+  {
+    "artistSlug": "caspar-david-friedrich",
+    "lifespan": "1774–1840",
+    "description": "将背影置于山海与薄雾之间，让风景承载沉思。",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q104884"
+  },
+  {
+    "artistSlug": "rembrandt",
+    "lifespan": "1606–1669",
+    "description": "以深厚暗部与温暖光线，注视面孔、岁月和人的处境。",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q5598"
+  },
+  {
+    "artistSlug": "j-m-w-turner",
+    "lifespan": "1775–1851",
+    "description": "让船、城市与远景融入光、雾和风暴。",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q159758"
+  }
+]

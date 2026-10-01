@@ -24,6 +24,8 @@ import {
 import type { Artwork, PersonalEntry, PersonalLibrary } from "./types";
 import Viewer from "./Viewer";
 import SaveArtwork from "./SaveArtwork";
+import { canonicalTag, randomArtwork } from "./curation";
+import artistProfiles from "./data/artists.json";
 import { usePwa, applyPwaUpdate } from "./pwa";
 const MyGallery = lazy(() =>
   import("./MyGallery").catch(() => ({
@@ -306,7 +308,11 @@ function Filters({ params, path }: { params: URLSearchParams; path: string }) {
               <select
                 aria-label={label}
                 data-active={params.has(field) || undefined}
-                value={params.get(field) || ""}
+                value={
+                  field === "tag"
+                    ? canonicalTag(params.get(field) || "")
+                    : params.get(field) || ""
+                }
                 onChange={(event) => update(field, event.target.value)}
               >
                 <option value="">全部{label.split(" / ")[0]}</option>
@@ -337,7 +343,7 @@ function Filters({ params, path }: { params: URLSearchParams; path: string }) {
                 <button key={field} onClick={() => update(field, "")}>
                   {field === "artist"
                     ? artworks.find((a) => a.artistSlug === v)?.artist
-                    : v}
+                    : field === "tag" ? canonicalTag(v) : v}
                   <span aria-hidden="true"> ×</span>
                   <span className="sr-only">移除筛选</span>
                 </button>
@@ -586,6 +592,9 @@ function IndexPage({ type }: { type: "artists" | "tags" }) {
             isArtist ? a.artistSlug === key : a.tags.includes(key),
           );
           const representative = matches[0];
+          const profile = isArtist
+            ? artistProfiles.find((a) => a.artistSlug === key)
+            : undefined;
           return (
             <a
               className="index-item"
@@ -599,6 +608,12 @@ function IndexPage({ type }: { type: "artists" | "tags" }) {
               <div className="index-label">
                 <h2>{isArtist ? item.artistZh : item}</h2>
                 {isArtist && <p>{item.artist}</p>}
+                {profile && (
+                  <p className="artist-wall-label">
+                    <span>{profile.lifespan}</span>
+                    {profile.description}
+                  </p>
+                )}
                 <span>
                   {matches.length} 件作品 <Icon name="arrow" size={18} />
                 </span>
@@ -628,6 +643,7 @@ export default function App() {
     }
   });
   const previousHash = useRef(hash);
+  const recentRandom = useRef<string[]>([]);
   const mainRef = useRef<HTMLElement>(null);
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -679,9 +695,11 @@ export default function App() {
     }
   };
   const random = () => {
-    const choices = artworks.filter((a) => a !== artwork);
-    const pick = choices[Math.floor(Math.random() * choices.length)];
-    navigate(artworkLink(pick));
+    const pick = randomArtwork(artworks, recentRandom.current, artwork);
+    if (pick) {
+      recentRandom.current = [...recentRandom.current, pick.id].slice(-5);
+      navigate(artworkLink(pick));
+    }
   };
   const favorites = path === "/favorites";
   const likedMode = params.get("kind") === "liked";
