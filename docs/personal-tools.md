@@ -56,6 +56,8 @@ Met 的 HEAD 采样含 Access-Control-Allow-Origin，但浏览器实际 GET 曾�
 
 新增作品除既有图像文件测试外，Vite buildStart 自动校验：ID/slug 唯一、必需标题／画家／年份／馆藏／权限、HTTPS 来源、预览路径、布尔 downloadable、标签、年份范围、宽高与 aspectRatio 一致。标为开放下载必须记录 Public domain / CC0 或明确开放下载；其他许可需人工核实并调整明确规则，不能仅开启按钮。默认个人备注和收藏仍为空。校验失败直接阻止构建与 Pages 发布。
 
+CI 浏览器依赖安装曾在 Azure Ubuntu 镜像下载阶段等待超过 15 分钟；工作流改为 Ubuntu 官方 archive 镜像，保留 Chromium / WebKit 的全部依赖安装与测试，Pages 部署仍须两个检查任务通过。
+
 ## 验证与限制
 
 最终结果：lint 通过，10/10 单元测试通过，生产 build 通过；三项目浏览器测试 44 项通过，1 项手机专用测试在桌面按设计跳过。原有回归覆盖保留。入口 JS gzip 约 85.51 KB（第二轮 83.07 KB，增加约 2.44 KB）；备份工具单独 chunk gzip 约 2.82 KB，PhotoSwipe 仍为按需 17.42 KB。没有新增图片预加载或将原图放入缓存。
