@@ -3,6 +3,8 @@ export function validateArtworks(value: unknown): void {
     throw new Error("Artwork collection must be a non-empty array");
   const ids = new Set();
   const slugs = new Set();
+  const images = new Set();
+  const artists = new Map();
   for (const artwork of value) {
     if (!artwork || typeof artwork !== "object")
       throw new Error("Invalid artwork");
@@ -34,6 +36,13 @@ export function validateArtworks(value: unknown): void {
       throw new Error(`${artwork.id}: duplicate id or slug`);
     ids.add(artwork.id);
     slugs.add(artwork.slug);
+    const artistName = `${artwork.artist}|${artwork.artistZh}`;
+    if (artists.has(artwork.artistSlug) && artists.get(artwork.artistSlug) !== artistName)
+      throw new Error(`${artwork.id}: inconsistent artist names`);
+    artists.set(artwork.artistSlug, artistName);
+    if (images.has(artwork.imageUrl))
+      throw new Error(`${artwork.id}: duplicate artwork image`);
+    images.add(artwork.imageUrl);
     for (const key of [
       "imageUrl",
       "sourceUrl",
@@ -52,7 +61,8 @@ export function validateArtworks(value: unknown): void {
       throw new Error(`${artwork.id}: missing downloadable boolean`);
     if (
       artwork.downloadable &&
-      !/Public domain|CC0|开放下载|open download/i.test(artwork.rights)
+      (!/Public domain|CC0|开放下载|open download/i.test(artwork.rights) ||
+        /US[- ]only|PD-US|美国限定/i.test(artwork.rights))
     )
       throw new Error(
         `${artwork.id}: downloadable artwork must document open download rights`,
@@ -82,6 +92,7 @@ export function validateArtworks(value: unknown): void {
     if (
       !Array.isArray(artwork.tags) ||
       !artwork.tags.length ||
+      new Set(artwork.tags).size !== artwork.tags.length ||
       artwork.tags.some(
         (tag: unknown) => typeof tag !== "string" || !tag.trim(),
       )

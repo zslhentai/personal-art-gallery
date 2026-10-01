@@ -1,4 +1,8 @@
 import { test, expect } from "@playwright/test";
+import artworks from "../../src/data/artworks.json" with { type: "json" };
+const total = artworks.length;
+const vanGoghCount = artworks.filter((a) => a.artistSlug === "vincent-van-gogh").length;
+const waterCount = artworks.filter((a) => a.tags.includes("水面")).length;
 const base = "/personal-art-gallery/";
 test("gallery has complete images, responsive layout, valid navigation and no browser errors", async ({
   page,
@@ -12,7 +16,7 @@ test("gallery has complete images, responsive layout, valid navigation and no br
   await expect(
     page.getByRole("heading", { name: /为喜欢的画，\s*留一间房。/ }),
   ).toBeVisible();
-  await expect(page.locator(".artwork-card")).toHaveCount(10);
+  await expect(page.locator(".artwork-card")).toHaveCount(total);
   for (const card of await page.locator(".artwork-card").all()) {
     await card.scrollIntoViewIfNeeded();
     await expect(card.locator("img")).toHaveJSProperty("complete", true);
@@ -41,8 +45,16 @@ test("gallery has complete images, responsive layout, valid navigation and no br
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({
     path: `test-results/${testInfo.project.name}-gallery.png`,
-    fullPage: true,
+    fullPage: await page.evaluate(() => Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) * devicePixelRatio < 32767),
   });
+  // WebKit cannot capture a single bitmap taller than 32767 physical pixels; all works above are still verified.
+  if (await page.evaluate(() => Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) * devicePixelRatio >= 32767)) {
+    for (const [label, index] of [["middle", Math.floor(total / 2)], ["end", total - 1]] as const) {
+      await page.locator(".artwork-card").nth(index).scrollIntoViewIfNeeded();
+      await page.screenshot({ path: `test-results/${testInfo.project.name}-gallery-${label}.png` });
+    }
+    await page.evaluate(() => window.scrollTo(0, 0));
+  }
   await page.getByRole("button", { name: "切换深色模式" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await page.reload();
@@ -61,7 +73,7 @@ test("filters combine, clear, survive refresh, and indices open the correct work
   await page
     .getByLabel("画家", { exact: true })
     .selectOption("vincent-van-gogh");
-  await expect(page.locator(".artwork-card")).toHaveCount(3);
+  await expect(page.locator(".artwork-card")).toHaveCount(vanGoghCount);
   await page.getByLabel("标签", { exact: true }).selectOption("肖像");
   await expect(page.locator(".artwork-card")).toHaveCount(1);
   await page.reload();
@@ -69,7 +81,7 @@ test("filters combine, clear, survive refresh, and indices open the correct work
   if (testInfo.project.name.includes("390"))
     await page.getByRole("button", { name: /筛选作品/ }).click();
   await page.getByRole("button", { name: "清除筛选", exact: true }).click();
-  await expect(page.locator(".artwork-card")).toHaveCount(10);
+  await expect(page.locator(".artwork-card")).toHaveCount(total);
   await page
     .getByLabel("流派 / 风格", { exact: true })
     .selectOption("新古典主义");
@@ -82,13 +94,13 @@ test("filters combine, clear, survive refresh, and indices open the correct work
     .getByRole("link", { name: "画家", exact: true })
     .click();
   await page.getByRole("link", { name: /文森特·梵高/ }).click();
-  await expect(page.locator(".artwork-card")).toHaveCount(3);
+  await expect(page.locator(".artwork-card")).toHaveCount(vanGoghCount);
   await page
     .locator(".main-nav")
     .getByRole("link", { name: "标签", exact: true })
     .click();
   await page.getByRole("link", { name: /^水面/ }).click();
-  await expect(page.locator(".artwork-card")).toHaveCount(1);
+  await expect(page.locator(".artwork-card")).toHaveCount(waterCount);
 });
 test("artwork metadata, independent likes and favorites, and notes persist locally", async ({
   page,
@@ -280,13 +292,13 @@ test("mobile originals load only on activation and viewer failures remain escapa
   });
   if (testInfo.project.name.includes("390")) expect(originals).toHaveLength(1);
   await page.keyboard.press("ArrowRight");
-  await expect(page.locator(".pswp__counter")).toHaveText("3 / 10");
+  await expect(page.locator(".pswp__counter")).toHaveText(`3 / ${total}`);
   await expect(image()).not.toHaveJSProperty("naturalWidth", 0, {
     timeout: 45000,
   });
   if (testInfo.project.name.includes("390")) expect(originals).toHaveLength(2);
   await page.keyboard.press("ArrowLeft");
-  await expect(page.locator(".pswp__counter")).toHaveText("2 / 10");
+  await expect(page.locator(".pswp__counter")).toHaveText(`2 / ${total}`);
   await expect(image()).not.toHaveJSProperty("naturalWidth", 0);
   if (testInfo.project.name.includes("390")) expect(originals).toHaveLength(2);
   await page.keyboard.press("Escape");

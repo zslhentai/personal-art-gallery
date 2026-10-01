@@ -6,7 +6,7 @@ const artworks = JSON.parse(
   await readFile(new URL("../src/data/artworks.json", import.meta.url), "utf8"),
 );
 test("curated collection has stable unique identifiers and complete source metadata", () => {
-  assert.ok(artworks.length >= 8);
+  assert.ok(artworks.length >= 60);
   validateArtworks(artworks);
   assert.equal(new Set(artworks.map((a) => a.id)).size, artworks.length);
   assert.equal(new Set(artworks.map((a) => a.slug)).size, artworks.length);
@@ -45,7 +45,7 @@ test("curated collection has stable unique identifiers and complete source metad
   assert.ok(artworks.some((a) => a.aspectRatio < 0.85));
   assert.ok(artworks.some((a) => a.aspectRatio > 1.45));
 });
-test("every responsive preview exists, is WebP, and the total stays below 5 MB", async () => {
+test("every responsive preview has correct dimensions, preserves composition and a bounded byte budget", async () => {
   let total = 0;
   for (const a of artworks)
     for (const width of [400, 800, 1200]) {
@@ -55,9 +55,17 @@ test("every responsive preview exists, is WebP, and the total stays below 5 MB",
       );
       const buffer = await readFile(url);
       assert.equal(buffer.toString("ascii", 8, 12), "WEBP");
-      total += (await stat(url)).size;
+      const bytes = (await stat(url)).size;
+      const limits = { 400: 96, 800: 320, 1200: 700 };
+      assert.ok(bytes < limits[width] * 1024, `${a.slug}-${width}: oversized preview`);
+      assert.equal(buffer.toString("ascii", 12, 16), "VP8 ");
+      const actualWidth = buffer.readUInt16LE(26) & 0x3fff;
+      const actualHeight = buffer.readUInt16LE(28) & 0x3fff;
+      assert.equal(actualWidth, width);
+      assert.ok(Math.abs(actualWidth / actualHeight - a.aspectRatio) < 0.015, `${a.slug}: preview crop/ratio`);
+      total += bytes;
     }
-  assert.ok(total < 5 * 1024 * 1024, `${total} bytes`);
+  assert.ok(total < artworks.length * 512 * 1024, `${total} bytes`);
 });
 test("GitHub Pages entry uses the repository base path and static hash routes", async () => {
   const { default: config } = await import("../vite.config.ts");
@@ -78,9 +86,17 @@ test("artwork additions fail on missing rights/download flag, duplicate ids and 
     { yearStart: 3000 },
     { sourceUrl: "javascript:alert(1)" },
     { tags: [null] },
+    { tags: ["水面", "水面"] },
+    { downloadable: true, rights: "Public domain / PD-US only" },
   ])
     assert.throws(() => validateArtworks([{ ...artworks[0], ...patch }]));
   assert.throws(() => validateArtworks([artworks[0], artworks[0]]));
+  assert.throws(() => validateArtworks([
+    artworks[0], { ...artworks[0], id: "duplicate-image", slug: "duplicate-image" },
+  ]));
+  assert.throws(() => validateArtworks([
+    artworks[0], { ...artworks[2], artist: "V. van Gogh" },
+  ]));
   assert.doesNotThrow(() =>
     validateArtworks([
       {
@@ -90,4 +106,22 @@ test("artwork additions fail on missing rights/download flag, duplicate ids and 
       },
     ]),
   );
+});
+
+test("each artwork has reviewed provenance and unique verified source records", async () => {
+  const rows = JSON.parse(await readFile(new URL("../docs/collection-sources.json", import.meta.url), "utf8"));
+  assert.equal(rows.length, artworks.length);
+  assert.equal(new Set(rows.map((r) => r.id)).size, rows.length);
+  const entityIds = rows.filter((r) => r.wikidata).map((r) => r.wikidata);
+  assert.equal(new Set(entityIds).size, entityIds.length, "duplicate museum artwork rather than a distinct series version");
+  for (const a of artworks) {
+    const r = rows.find((r) => r.id === a.id);
+    assert.ok(r, `${a.id}: missing provenance`);
+    assert.equal(r.imageUrl, a.imageUrl);
+    assert.equal(r.sourceUrl, a.sourceUrl);
+    assert.equal(r.verifiedImageWidth, a.width);
+    assert.equal(r.verifiedImageHeight, a.height);
+    assert.ok(r.checkedAt && r.license && r.metadataSource);
+    if (a.id.startsWith("met-")) assert.equal(r.isPublicDomain, true);
+  }
 });

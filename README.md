@@ -1,6 +1,6 @@
 # 私人美术馆 · Personal Art Gallery
 
-一个安静、以画作为中心的响应式个人数字美术馆。十件开放作品，保留原始构图，适合手机长时间浏览。
+一个安静、以画作为中心的响应式个人数字美术馆。62 件经过来源与版权核实的作品，保留原始构图，适合手机长时间浏览。
 
 Pages 公开地址：**https://zslhentai.github.io/personal-art-gallery/**
 
@@ -73,13 +73,15 @@ Manifest、图标和构建生成的 Service Worker 均使用仓库子路径；HT
 
 `width/height` 是实际原图像素；`dimensions` 是实体画作尺寸；`aspectRatio = width / height`。保留 `year` 原文显示和 `yearStart/yearEnd` 数值区间（年代筛选按起始年）。新增标签和画家自动进入索引和筛选，不另写页面。
 
-预览存为 `public/images/{slug}-400.webp`、`-800.webp`、`-1200.webp`，保留全构图，不放大低分辨率来源。详情和列表通过 `srcset` 选择尺寸；`imageUrl` 为外部官方高清图，`imageSourceUrl` 解释来源。首批预览总计约 4.08 MB，高清原图未入库。现有 Met 预览可用 `python3 scripts/refresh-previews.py` 重新核对并生成，需要 Python 3 与 ImageMagick 7。
+预览存为 `public/images/{slug}-400.webp`、`-800.webp`、`-1200.webp`，保留全构图，不放大低分辨率来源。详情和列表通过 `srcset` 选择尺寸；`imageUrl` 为外部官方高清图，`imageSourceUrl` 解释来源。全部预览总计约 18.97 MiB，高清原图未入库。Met / Commons 预览可用 `python3 scripts/refresh-previews.py` 重新核对并生成，需要 Python 3 与 ImageMagick 7。
 
 默认 `favorite:false`、`notes:""`；用户的喜欢、收藏和备注另存于 `personal-art-gallery:library:v1` 的 localStorage 中。它们不会修改公开馆藏，不自动跨设备同步；清除站点数据会移除个人状态。可从收藏页或页脚进入“备份与安装”，先导出 JSON，再在新设备预览并确认合并导入；已有非空备注优先保留。iPhone 可通过 Safari 分享菜单添加到主屏幕。
 
 ## 研究、验证与后续
 
 完整的七项目调研、布局比较、字段取舍、图片许可核实和实施顺序见 [docs/research.md](docs/research.md)。第一版实际验证与限制见 [docs/verification.md](docs/verification.md)。第二轮自检、精修、性能采样和验证见 [docs/polish-review.md](docs/polish-review.md)。
+
+本轮 10 → 62 件馆藏、版本取舍、未收录作品、来源与性能记录见 [docs/collection-expansion.md](docs/collection-expansion.md)；逐件来源台账见 [docs/collection-sources.json](docs/collection-sources.json)。
 
 高清保存、备份结构／导入策略、PWA 缓存与更新、验证边界见 [docs/personal-tools.md](docs/personal-tools.md)。
 

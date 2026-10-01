@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
+import artworks from "../../src/data/artworks.json" with { type: "json" };
 const base = "/personal-art-gallery/";
 const id = "met-441933";
 const key = "personal-art-gallery:library:v1";
@@ -183,7 +184,7 @@ test("save uses the original from detail and the currently viewed work", async (
     page.locator(".pswp__item").nth(1).locator("img"),
   ).not.toHaveJSProperty("naturalWidth", 0, { timeout: 45000 });
   await page.keyboard.press("ArrowRight");
-  await expect(page.locator(".pswp__counter")).toHaveText("3 / 10");
+  await expect(page.locator(".pswp__counter")).toHaveText(`3 / ${artworks.length}`);
   const save = page.getByRole("button", { name: /^保存作品《/ });
   await expect(save).toHaveAttribute("aria-label", "保存作品《玫瑰》");
   if (info.project.name.includes("390")) {

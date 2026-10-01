@@ -482,7 +482,7 @@ function ArtworkDetail({
               <dt>Original Source / 原始来源</dt>
               <dd>
                 <a href={artwork.sourceUrl} target="_blank" rel="noreferrer">
-                  博物馆藏品记录 ↗
+                  作品来源记录 ↗
                 </a>
               </dd>
             </div>
@@ -494,7 +494,7 @@ function ArtworkDetail({
                   target="_blank"
                   rel="noreferrer"
                 >
-                  官方开放图片 ↗
+                  图片来源与许可 ↗
                 </a>
               </dd>
             </div>
