@@ -264,6 +264,7 @@ test("compact mobile entrance stays usable at 375, 390 and 430 pixels", async ({
 
 test("mobile originals load only on activation and viewer failures remain escapable", async ({
   page,
+  browser,
 }, testInfo) => {
   const originals: string[] = [];
   page.on("request", (request) => {
@@ -290,16 +291,31 @@ test("mobile originals load only on activation and viewer failures remain escapa
   if (testInfo.project.name.includes("390")) expect(originals).toHaveLength(2);
   await page.keyboard.press("Escape");
   await expect(page.locator(".pswp")).toHaveCount(0);
-  await page.goto(`${base}#/artwork/the-death-of-socrates`);
-  await page.route("**/original/**", (route) => route.abort());
-  await page.getByRole("button", { name: /高清查看/ }).click();
-  await expect(
-    page
-      .locator(".pswp__item")
-      .nth(1)
-      .getByText(/高清图片暂时无法加载/),
-  ).toBeVisible();
-  await page.getByRole("button", { name: "关闭大图" }).click();
-  await expect(page.locator(".pswp")).toHaveCount(0);
-  await expect(page).not.toHaveURL(/view=1/);
+  // Network fault injection is isolated from worker routing; the loading/cache checks above keep the real worker enabled.
+  const errorContext = await browser.newContext({
+    serviceWorkers: "block",
+    viewport: page.viewportSize()!,
+    userAgent: await page.evaluate(() => navigator.userAgent),
+  });
+  try {
+    const failure = await errorContext.newPage();
+    await failure.route("**/original/**", (route) =>
+      route.fulfill({ status: 503, body: "Unavailable" }),
+    );
+    await failure.goto(
+      `http://127.0.0.1:4173${base}#/artwork/the-death-of-socrates`,
+    );
+    await failure.getByRole("button", { name: /高清查看/ }).click();
+    await expect(
+      failure
+        .locator(".pswp__item")
+        .nth(1)
+        .getByText(/高清图片暂时无法加载/),
+    ).toBeVisible();
+    await failure.getByRole("button", { name: "关闭大图" }).click();
+    await expect(failure.locator(".pswp")).toHaveCount(0);
+    await expect(failure).not.toHaveURL(/view=1/);
+  } finally {
+    await errorContext.close();
+  }
 });

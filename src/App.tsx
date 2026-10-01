@@ -1,4 +1,6 @@
 import {
+  lazy,
+  Suspense,
   useEffect,
   useRef,
   useState,
@@ -21,6 +23,18 @@ import {
 } from "./library";
 import type { Artwork, PersonalEntry, PersonalLibrary } from "./types";
 import Viewer from "./Viewer";
+import SaveArtwork from "./SaveArtwork";
+import { usePwa, applyPwaUpdate } from "./pwa";
+const MyGallery = lazy(() =>
+  import("./MyGallery").catch(() => ({
+    default: () => (
+      <p className="storage-message" role="alert">
+        备份页面暂未加载，请联网后{" "}
+        <button onClick={() => location.reload()}>刷新重试</button>。
+      </p>
+    ),
+  })),
+);
 
 const subscribe = (cb: () => void) => {
   window.addEventListener("hashchange", cb);
@@ -392,7 +406,8 @@ function ArtworkDetail({
             </span>
           </button>
           <p className="image-credit">
-            The Metropolitan Museum of Art · Open Access
+            {artwork.museum} ·{" "}
+            {artwork.downloadable ? "开放下载" : "请查看图片权限"}
           </p>
         </div>
         <div className="detail-information">
@@ -441,6 +456,7 @@ function ArtworkDetail({
           <p className="sr-only" role="status">
             {actionStatus}
           </p>
+          <SaveArtwork artwork={artwork} />
           <dl className="metadata">
             {[
               ["Artist / 画家", artwork.artist],
@@ -595,6 +611,7 @@ function IndexPage({ type }: { type: "artists" | "tags" }) {
   );
 }
 export default function App() {
+  const pwa = usePwa();
   const hash = useSyncExternalStore(subscribe, getHash);
   const [path, query = ""] = hash.slice(1).split("?");
   const params = new URLSearchParams(query);
@@ -638,8 +655,19 @@ export default function App() {
     ? artworks.find((a) => a.slug === path.split("/")[2])
     : undefined;
   useEffect(() => {
-    document.title = `${artwork ? artwork.titleZh : path === "/favorites" ? "我的收藏" : path === "/artists" ? "画家" : path === "/tags" ? "标签" : "画廊"} · 私人美术馆`;
+    document.title = `${artwork ? artwork.titleZh : path === "/favorites" ? "我的收藏" : path === "/artists" ? "画家" : path === "/tags" ? "标签" : path === "/my-gallery" ? "备份与安装" : "画廊"} · 私人美术馆`;
   }, [artwork, path]);
+  const restore = (next: PersonalLibrary) => {
+    try {
+      localStorage.setItem(libraryKey, JSON.stringify(next));
+      setLibrary(next);
+      setStorageError(false);
+      return true;
+    } catch {
+      setStorageError(true);
+      return false;
+    }
+  };
   const update = (id: string, patch: PersonalEntry) => {
     const next = { ...library, [id]: { ...library[id], ...patch } };
     setLibrary(next);
@@ -668,7 +696,9 @@ export default function App() {
     params,
   );
   const unknown =
-    !["/", "", "/favorites", "/artists", "/tags"].includes(path) && !artwork;
+    !["/", "", "/favorites", "/artists", "/tags", "/my-gallery"].includes(
+      path,
+    ) && !artwork;
   return (
     <>
       <a
@@ -738,6 +768,17 @@ export default function App() {
         tabIndex={-1}
         className={artwork ? "main detail-main" : "main"}
       >
+        {pwa.offline && (
+          <p className="storage-message" role="status">
+            目前离线，收藏和备注仍可使用；未加载的画作与高清原图需联网。
+          </p>
+        )}
+        {pwa.updateReady && (
+          <p className="storage-message pwa-update" role="status">
+            美术馆有新版本。请先保存备注，再{" "}
+            <button onClick={applyPwaUpdate}>刷新更新</button>。
+          </p>
+        )}
         {storageError && (
           <p className="storage-message" role="alert">
             浏览器未允许本地保存；本次修改仍可浏览，但刷新后可能丢失。
@@ -751,6 +792,14 @@ export default function App() {
             update={(patch) => update(artwork.id, patch)}
             onRandom={random}
           />
+        ) : path === "/my-gallery" ? (
+          <Suspense
+            fallback={
+              <p className="section-description">正在打开你的美术馆…</p>
+            }
+          >
+            <MyGallery library={library} restore={restore} />
+          </Suspense>
         ) : path === "/artists" || path === "/tags" ? (
           <IndexPage type={path.slice(1) as "artists" | "tags"} />
         ) : unknown ? (
@@ -792,6 +841,11 @@ export default function App() {
                   <span>一处可以停留的地方</span>
                 </div>
               </section>
+            )}
+            {favorites && (
+              <a className="backup-link" href="#/my-gallery">
+                备份与迁移 →
+              </a>
             )}
             <div className="gallery-toolbar">
               <div className="gallery-tabs">
@@ -863,6 +917,9 @@ export default function App() {
         <div>
           <span>私人美术馆</span>
           <p>A small collection. A slower way of seeing.</p>
+          <a className="footer-tools" href="#/my-gallery">
+            备份与安装 →
+          </a>
         </div>
         <div>
           <span>为观看而收藏</span>

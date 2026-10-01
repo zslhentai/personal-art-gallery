@@ -1,0 +1,26 @@
+{
+  "id": "/personal-art-gallery/",
+  "name": "私人美术馆",
+  "short_name": "私人美术馆",
+  "description": "一间安静的私人数字美术馆。收藏画作，慢慢观看。",
+  "lang": "zh-CN",
+  "start_url": "/personal-art-gallery/",
+  "scope": "/personal-art-gallery/",
+  "display": "standalone",
+  "theme_color": "#f6f4ef",
+  "background_color": "#f6f4ef",
+  "icons": [
+    {
+      "src": "/personal-art-gallery/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/personal-art-gallery/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

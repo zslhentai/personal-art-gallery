@@ -1,11 +1,13 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
+import { validateArtworks } from "../scripts/validate-artworks.ts";
 const artworks = JSON.parse(
   await readFile(new URL("../src/data/artworks.json", import.meta.url), "utf8"),
 );
 test("curated collection has stable unique identifiers and complete source metadata", () => {
-  assert.ok(artworks.length >= 8 && artworks.length <= 15);
+  assert.ok(artworks.length >= 8);
+  validateArtworks(artworks);
   assert.equal(new Set(artworks.map((a) => a.id)).size, artworks.length);
   assert.equal(new Set(artworks.map((a) => a.slug)).size, artworks.length);
   for (const a of artworks) {
@@ -35,9 +37,9 @@ test("curated collection has stable unique identifiers and complete source metad
     assert.ok(a.width > 1200 && a.height > 1200);
     assert.ok(Math.abs(a.aspectRatio - a.width / a.height) < 0.0001);
     assert.ok(a.tags.length > 0);
-    assert.match(a.rights, /Public domain \/ CC0/);
-    assert.equal(new URL(a.imageUrl).hostname, "images.metmuseum.org");
-    assert.equal(new URL(a.sourceUrl).hostname, "www.metmuseum.org");
+    assert.equal(typeof a.downloadable, "boolean");
+    assert.equal(new URL(a.imageUrl).protocol, "https:");
+    assert.equal(new URL(a.sourceUrl).protocol, "https:");
     assert.equal(a.notes, "", "do not invent the owner’s personal notes");
   }
   assert.ok(artworks.some((a) => a.aspectRatio < 0.85));
@@ -65,4 +67,27 @@ test("GitHub Pages entry uses the repository base path and static hash routes", 
     "utf8",
   );
   assert.match(workflow, /actions\/deploy-pages@v4/);
+});
+
+test("artwork additions fail on missing rights/download flag, duplicate ids and invalid ratios", () => {
+  for (const patch of [
+    { downloadable: undefined },
+    { rights: "" },
+    { downloadable: true, rights: "Unknown" },
+    { aspectRatio: 2 },
+    { yearStart: 3000 },
+    { sourceUrl: "javascript:alert(1)" },
+    { tags: [null] },
+  ])
+    assert.throws(() => validateArtworks([{ ...artworks[0], ...patch }]));
+  assert.throws(() => validateArtworks([artworks[0], artworks[0]]));
+  assert.doesNotThrow(() =>
+    validateArtworks([
+      {
+        ...artworks[0],
+        downloadable: false,
+        rights: "Unknown / permission required",
+      },
+    ]),
+  );
 });

@@ -1257,3 +1257,150 @@ img {
     padding-top: max(18px, var(--safe-top));
   }
 }
+
+.save-artwork {
+  margin: 14px 0 0;
+}
+.save-artwork button,
+.quiet-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 12px;
+  color: var(--accent);
+}
+.save-artwork button:disabled,
+.quiet-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.save-artwork p,
+.tool-status {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.save-artwork p:empty,
+.tool-status:empty {
+  display: none;
+}
+.save-artwork p a,
+.pwa-update button {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.backup-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.site-footer .footer-tools {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-size: 11px;
+  margin-top: 4px;
+}
+.my-gallery {
+  max-width: 760px;
+  padding-bottom: 64px;
+}
+.my-gallery .section-heading h1 {
+  font-size: clamp(26px, 4vw, 38px);
+}
+.quiet-tool {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 32px;
+}
+.quiet-tool h2 {
+  font:
+    400 21px/1.6 "Songti SC",
+    "STSong",
+    Georgia,
+    serif;
+  margin-bottom: 12px;
+}
+.quiet-tool p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.quiet-actions {
+  display: flex;
+  gap: 12px 28px;
+  flex-wrap: wrap;
+  margin: 8px 0 12px;
+}
+.quiet-actions button {
+  border-bottom: 1px solid var(--line);
+}
+.import-preview {
+  border-left: 2px solid var(--line);
+  padding-left: 18px;
+  margin: 24px 0 8px;
+}
+.import-preview h3 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.pwa-update button {
+  min-height: 44px;
+  color: var(--accent);
+}
+.pswp__button--save-artwork {
+  width: auto;
+  min-width: 56px;
+  padding: 0 10px;
+  font-size: 11px;
+  color: #e8ecdf;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.pswp__save-status {
+  position: absolute;
+  top: calc(60px + var(--safe-top));
+  left: calc(20px + var(--safe-left));
+  right: calc(20px + var(--safe-right));
+  color: #dce2d5;
+  font-size: 11px;
+  line-height: 1.8;
+  text-align: center;
+  pointer-events: none;
+}
+.pswp__save-status a {
+  pointer-events: auto;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pswp__button--save-artwork[hidden] {
+  display: none;
+}
+.viewer-load-error {
+  position: fixed;
+  z-index: 10000;
+  bottom: calc(24px + var(--safe-bottom));
+  left: max(20px, var(--safe-left));
+  right: max(20px, var(--safe-right));
+  max-width: 520px;
+  margin: auto;
+  padding: 18px 24px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.viewer-load-error button {
+  min-height: 44px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

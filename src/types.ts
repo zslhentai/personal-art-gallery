@@ -25,6 +25,7 @@ export interface Artwork {
   width: number;
   height: number;
   rights: string;
+  downloadable: boolean;
   alt: string;
 }
 export interface PersonalEntry {
