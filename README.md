@@ -4,7 +4,7 @@
 
 Pages 公开地址：**https://zslhentai.github.io/personal-art-gallery/**
 
-当前集成启用 Pages 时返回权限 403；需管理员按下方部署步骤在 Settings → Pages 选择 GitHub Actions 后发布。本地和云端构建／浏览器检查均通过；首次运行仅发布步骤因 Pages 未启用失败，此地址目前为 HTTP 404。启用后在 [Actions](https://github.com/zslhentai/personal-art-gallery/actions) 重新运行失败的部署任务或手动运行工作流即可发布。
+GitHub Pages 已启用，公开地址实测返回 HTTP 200。每次推送 main 经检查后自动部署；发布结果见 [Actions](https://github.com/zslhentai/personal-art-gallery/actions)。
 
 ## 第一版
 
@@ -42,7 +42,7 @@ npx playwright install --with-deps chromium webkit
 npm run test:e2e
 ```
 
-包括桌面 Chromium、390×844 Chromium 及 WebKit 的画廊／详情／筛选／索引／收藏／备注／随机／Viewer／返回行为与控制台检查。可通过 `CHROMIUM_PATH`、`WEBKIT_PATH` 指定已安装浏览器。本地模拟不能代替实体 iPhone 的双指手势与 iOS 系统边缘返回测试。
+包括桌面 Chromium、390×664 视口（iPhone 13 / DPR 3）的 Chromium 及 WebKit 的画廊／详情／筛选／索引／收藏／备注／随机／Viewer／返回行为与控制台检查。可通过 `CHROMIUM_PATH`、`WEBKIT_PATH` 指定已安装浏览器。本地模拟不能代替实体 iPhone 的双指手势与 iOS 系统边缘返回测试。
 
 ## GitHub Pages 部署
 
@@ -75,6 +75,6 @@ Vite `base` 固定为 `/personal-art-gallery/`。应用使用 `#/` hash 路由�
 
 ## 研究、验证与后续
 
-完整的七项目调研、布局比较、字段取舍、图片许可核实和实施顺序见 [docs/research.md](docs/research.md)。实际验证与限制见 [docs/verification.md](docs/verification.md)。
+完整的七项目调研、布局比较、字段取舍、图片许可核实和实施顺序见 [docs/research.md](docs/research.md)。第一版实际验证与限制见 [docs/verification.md](docs/verification.md)。第二轮自检、精修、性能采样和验证见 [docs/polish-review.md](docs/polish-review.md)。
 
 优先改进：个人数据 JSON 导出／导入；补充确认开放的莫奈等作品；高清网络流量优化（IIIF 来源或可选更小高清层）；实体 iPhone 手势与 VoiceOver 验证；增加作品后重新检验极端比例与行布局。

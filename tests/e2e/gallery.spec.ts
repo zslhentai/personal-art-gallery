@@ -17,14 +17,11 @@ test("gallery has complete images, responsive layout, valid navigation and no br
     await card.scrollIntoViewIfNeeded();
     await expect(card.locator("img")).toHaveJSProperty("complete", true);
     await expect(card.locator("img")).not.toHaveJSProperty("naturalWidth", 0);
-    const metrics = await card
-      .locator("img")
-      .evaluate((img) => ({
-        ratio:
-          img.getBoundingClientRect().width /
-          img.getBoundingClientRect().height,
-        original: img.naturalWidth / img.naturalHeight,
-      }));
+    const metrics = await card.locator("img").evaluate((img) => ({
+      ratio:
+        img.getBoundingClientRect().width / img.getBoundingClientRect().height,
+      original: img.naturalWidth / img.naturalHeight,
+    }));
     expect(Math.abs(metrics.ratio - metrics.original)).toBeLessThan(0.02);
   }
   expect(
@@ -71,7 +68,7 @@ test("filters combine, clear, survive refresh, and indices open the correct work
   await expect(page.locator(".artwork-card")).toHaveCount(1);
   if (testInfo.project.name.includes("390"))
     await page.getByRole("button", { name: /筛选作品/ }).click();
-  await page.getByRole("link", { name: "清除筛选", exact: true }).click();
+  await page.getByRole("button", { name: "清除筛选", exact: true }).click();
   await expect(page.locator(".artwork-card")).toHaveCount(10);
   await page
     .getByLabel("流派 / 风格", { exact: true })
@@ -153,7 +150,10 @@ test("random opens another artwork, viewer supports keyboard navigation, zoom, E
   await expect(page).not.toHaveURL(/moonlight-strandgade/);
   await page.getByRole("button", { name: /高清查看/ }).click();
   await expect(page.locator(".pswp")).toBeVisible();
-  const currentImage = page.locator(".pswp__item").nth(1).locator("img.pswp__img");
+  const currentImage = page
+    .locator(".pswp__item")
+    .nth(1)
+    .locator("img.pswp__img");
   await expect(currentImage).toHaveJSProperty("complete", true, {
     timeout: 45000,
   });
@@ -204,4 +204,102 @@ test("direct viewer link closes into the artwork, invalid routes and corrupt sto
   await expect(
     page.getByRole("heading", { name: "这件作品还未入馆" }),
   ).toBeVisible();
+});
+
+test("filter changes preserve keyboard focus and clearing keeps the liked collection", async ({
+  page,
+}, testInfo) => {
+  await page.goto(`${base}#/artwork/moonlight-strandgade`);
+  await page.getByRole("button", { name: "喜欢", exact: true }).click();
+  await expect(
+    page.getByRole("status").filter({ hasText: "已喜欢" }),
+  ).toContainText("喜欢");
+  await page.goto(`${base}#/favorites?kind=liked`);
+  if (testInfo.project.name.includes("390"))
+    await page.getByRole("button", { name: /筛选作品/ }).click();
+  const artist = page.getByLabel("画家", { exact: true });
+  await artist.focus();
+  await artist.selectOption("vilhelm-hammersh-i");
+  await expect(artist).toBeFocused();
+  await expect(page.locator(".artwork-card")).toHaveCount(1);
+  await page.getByRole("button", { name: "清除筛选", exact: true }).click();
+  await expect(page).toHaveURL(/favorites\?kind=liked$/);
+  await expect(page.locator(".artwork-card")).toHaveCount(1);
+  await expect(page.locator(".reset-filters")).toBeDisabled();
+  await page.reload();
+  await expect(page.locator(".artwork-card")).toHaveCount(1);
+});
+
+test("compact mobile entrance stays usable at 375, 390 and 430 pixels", async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    !testInfo.project.name.includes("390"),
+    "Mobile viewport regression",
+  );
+  for (const width of [375, 390, 430]) {
+    await page.setViewportSize({ width, height: 600 });
+    await page.goto(base);
+    await expect(
+      page.getByRole("button", { name: "随机看一幅作品" }),
+    ).toBeVisible();
+    const first = await page.locator(".artwork-card img").first().boundingBox();
+    expect(first!.y).toBeLessThan(480);
+    expect(first!.width).toBeCloseTo(width - 40, 0);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    expect(
+      (await page
+        .getByRole("button", { name: "随机看一幅作品" })
+        .boundingBox())!.height,
+    ).toBeGreaterThanOrEqual(44);
+    await expect(page.getByLabel("画家", { exact: true })).toBeHidden();
+    await page.getByRole("button", { name: "筛选作品", exact: true }).click();
+    await expect(page.getByLabel("画家", { exact: true })).toBeVisible();
+  }
+});
+
+test("mobile originals load only on activation and viewer failures remain escapable", async ({
+  page,
+}, testInfo) => {
+  const originals: string[] = [];
+  page.on("request", (request) => {
+    if (request.url().includes("/original/")) originals.push(request.url());
+  });
+  await page.goto(`${base}#/artwork/moonlight-strandgade`);
+  expect(originals).toHaveLength(0);
+  await page.getByRole("button", { name: /高清查看/ }).click();
+  const image = () =>
+    page.locator(".pswp__item").nth(1).locator("img.pswp__img");
+  await expect(image()).not.toHaveJSProperty("naturalWidth", 0, {
+    timeout: 45000,
+  });
+  if (testInfo.project.name.includes("390")) expect(originals).toHaveLength(1);
+  await page.keyboard.press("ArrowRight");
+  await expect(page.locator(".pswp__counter")).toHaveText("3 / 10");
+  await expect(image()).not.toHaveJSProperty("naturalWidth", 0, {
+    timeout: 45000,
+  });
+  if (testInfo.project.name.includes("390")) expect(originals).toHaveLength(2);
+  await page.keyboard.press("ArrowLeft");
+  await expect(page.locator(".pswp__counter")).toHaveText("2 / 10");
+  await expect(image()).not.toHaveJSProperty("naturalWidth", 0);
+  if (testInfo.project.name.includes("390")) expect(originals).toHaveLength(2);
+  await page.keyboard.press("Escape");
+  await expect(page.locator(".pswp")).toHaveCount(0);
+  await page.goto(`${base}#/artwork/the-death-of-socrates`);
+  await page.route("**/original/**", (route) => route.abort());
+  await page.getByRole("button", { name: /高清查看/ }).click();
+  await expect(
+    page
+      .locator(".pswp__item")
+      .nth(1)
+      .getByText(/高清图片暂时无法加载/),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "关闭大图" }).click();
+  await expect(page.locator(".pswp")).toHaveCount(0);
+  await expect(page).not.toHaveURL(/view=1/);
 });

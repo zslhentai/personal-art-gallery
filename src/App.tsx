@@ -92,10 +92,12 @@ function ArtworkImage({
   artwork,
   eager = false,
   detail = false,
+  sizes,
 }: {
   artwork: Artwork;
   eager?: boolean;
   detail?: boolean;
+  sizes?: string;
 }) {
   const [failed, setFailed] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -109,9 +111,10 @@ function ArtworkImage({
           src={imagePath(artwork, detail ? 1200 : 800)}
           srcSet={imageSrcSet(artwork)}
           sizes={
-            detail
+            sizes ??
+            (detail
               ? "(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) 65vw, 820px"
-              : "(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) 45vw, 36vw"
+              : "(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) 45vw, 36vw")
           }
           width={artwork.width}
           height={artwork.height}
@@ -131,7 +134,15 @@ function ArtworkImage({
     </div>
   );
 }
-function ArtworkCard({ artwork, index }: { artwork: Artwork; index: number }) {
+function ArtworkCard({
+  artwork,
+  eager,
+  width,
+}: {
+  artwork: Artwork;
+  eager: boolean;
+  width: number;
+}) {
   return (
     <article className="artwork-card">
       <a
@@ -139,7 +150,11 @@ function ArtworkCard({ artwork, index }: { artwork: Artwork; index: number }) {
         href={artworkLink(artwork)}
         aria-label={`查看《${artwork.titleZh}》`}
       >
-        <ArtworkImage artwork={artwork} eager={index < 3} />
+        <ArtworkImage
+          artwork={artwork}
+          eager={eager}
+          sizes={`${Math.ceil(width)}px`}
+        />
       </a>
       <div className="card-caption">
         <div>
@@ -148,7 +163,11 @@ function ArtworkCard({ artwork, index }: { artwork: Artwork; index: number }) {
           </a>
           <p>{artwork.artist}</p>
         </div>
-        <span className="card-year">{artwork.yearStart}</span>
+        <span className="card-year">
+          {artwork.yearStart === artwork.yearEnd
+            ? artwork.yearStart
+            : `${artwork.yearStart}–${artwork.yearEnd}`}
+        </span>
       </div>
     </article>
   );
@@ -157,6 +176,7 @@ function GalleryGrid({ items }: { items: Artwork[] }) {
   const mobile = useSyncExternalStore(subscribeViewport, isMobile);
   return (
     <RowsPhotoAlbum
+      componentsProps={{ container: { "aria-label": "馆藏作品画廊" } }}
       photos={items.map((artwork) => ({
         src: artwork.thumbnailUrl,
         width: artwork.width,
@@ -183,7 +203,11 @@ function GalleryGrid({ items }: { items: Artwork[] }) {
               } as CSSProperties
             }
           >
-            <ArtworkCard artwork={photo.artwork} index={index} />
+            <ArtworkCard
+              artwork={photo.artwork}
+              eager={index < (mobile ? 1 : 3)}
+              width={width}
+            />
           </div>
         ),
       }}
@@ -191,10 +215,18 @@ function GalleryGrid({ items }: { items: Artwork[] }) {
   );
 }
 function Filters({ params, path }: { params: URLSearchParams; path: string }) {
+  const mobile = useSyncExternalStore(subscribeViewport, isMobile);
   const [open, setOpen] = useState(false);
   const active = ["artist", "movement", "decade", "tag"].filter((field) =>
     params.has(field),
   ).length;
+  const clear = () => {
+    const next = new URLSearchParams(params);
+    ["artist", "movement", "decade", "tag"].forEach((field) =>
+      next.delete(field),
+    );
+    navigate(`${path}${next.size ? `?${next}` : ""}`);
+  };
   const update = (field: string, value: string) => {
     const next = new URLSearchParams(params);
     if (value) next.set(field, value);
@@ -209,66 +241,78 @@ function Filters({ params, path }: { params: URLSearchParams; path: string }) {
         aria-expanded={open}
         aria-controls="gallery-filters"
       >
-        <Icon name="filter" />
         筛选作品{active ? ` · ${active}` : ""}
-        <span>{open ? "−" : "+"}</span>
+        <span className="filter-chevron" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="m3 6 5 5 5-5" stroke="currentColor" strokeWidth="1.3" />
+          </svg>
+        </span>
       </button>
-      <div id="gallery-filters" className={`filters ${open ? "expanded" : ""}`}>
-        {[
-          {
-            field: "artist",
-            label: "画家",
-            values: Array.from(
-              new Map(artworks.map((a) => [a.artistSlug, a.artist])).entries(),
-            ),
-          },
-          {
-            field: "movement",
-            label: "流派 / 风格",
-            values: [...new Set(artworks.map((a) => a.movement))].map((v) => [
-              v,
-              v,
-            ]),
-          },
-          {
-            field: "decade",
-            label: "年代",
-            values: [...new Set(artworks.map(decade))]
-              .sort()
-              .map((v) => [v, v]),
-          },
-          {
-            field: "tag",
-            label: "标签",
-            values: [...new Set(artworks.flatMap((a) => a.tags))].map((v) => [
-              v,
-              v,
-            ]),
-          },
-        ].map(({ field, label, values }) => (
-          <label key={field}>
-            <span>{label}</span>
-            <select
-              aria-label={label}
-              value={params.get(field) || ""}
-              onChange={(event) => update(field, event.target.value)}
-            >
-              <option value="">全部{label.split(" / ")[0]}</option>
-              {values.map(([value, text]) => (
-                <option key={value} value={value}>
-                  {text}
-                </option>
-              ))}
-            </select>
-          </label>
-        ))}
-        <a
-          className={`reset-filters ${active ? "" : "disabled"}`}
-          href={`#${path}`}
-          aria-disabled={!active}
-        >
-          清除筛选
-        </a>
+      <div
+        className={`filter-disclosure ${open ? "expanded" : ""}`}
+        inert={mobile && !open ? true : undefined}
+      >
+        <div id="gallery-filters" className="filters">
+          {[
+            {
+              field: "artist",
+              label: "画家",
+              values: Array.from(
+                new Map(
+                  artworks.map((a) => [a.artistSlug, a.artist]),
+                ).entries(),
+              ),
+            },
+            {
+              field: "movement",
+              label: "流派 / 风格",
+              values: [...new Set(artworks.map((a) => a.movement))].map((v) => [
+                v,
+                v,
+              ]),
+            },
+            {
+              field: "decade",
+              label: "年代",
+              values: [...new Set(artworks.map(decade))]
+                .sort()
+                .map((v) => [v, v]),
+            },
+            {
+              field: "tag",
+              label: "标签",
+              values: [...new Set(artworks.flatMap((a) => a.tags))].map((v) => [
+                v,
+                v,
+              ]),
+            },
+          ].map(({ field, label, values }) => (
+            <label key={field}>
+              <span>{label}</span>
+              <select
+                aria-label={label}
+                data-active={params.has(field) || undefined}
+                value={params.get(field) || ""}
+                onChange={(event) => update(field, event.target.value)}
+              >
+                <option value="">全部{label.split(" / ")[0]}</option>
+                {values.map(([value, text]) => (
+                  <option key={value} value={value}>
+                    {text}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ))}
+          <button
+            className="reset-filters"
+            type="button"
+            disabled={!active}
+            onClick={clear}
+          >
+            清除筛选
+          </button>
+        </div>
       </div>
       {active > 0 && (
         <div className="active-filters" aria-label="已选筛选">
@@ -323,6 +367,7 @@ function ArtworkDetail({
   const index = artworks.indexOf(artwork);
   const [draft, setDraft] = useState(personal.notes ?? artwork.notes);
   const [saved, setSaved] = useState(false);
+  const [actionStatus, setActionStatus] = useState("");
   return (
     <>
       <div className="detail-top">
@@ -368,19 +413,34 @@ function ArtworkDetail({
           <div className="personal-actions">
             <button
               aria-pressed={!!personal.liked}
-              onClick={() => update({ liked: !personal.liked })}
+              onClick={() => {
+                update({ liked: !personal.liked });
+                setActionStatus(
+                  personal.liked
+                    ? "已取消喜欢"
+                    : `已喜欢《${artwork.titleZh}》`,
+                );
+              }}
             >
               <Icon name="heart" />
               {personal.liked ? "已喜欢" : "喜欢"}
             </button>
             <button
               aria-pressed={favorite}
-              onClick={() => update({ favorite: !favorite })}
+              onClick={() => {
+                update({ favorite: !favorite });
+                setActionStatus(
+                  favorite ? "已取消收藏" : `已收藏《${artwork.titleZh}》`,
+                );
+              }}
             >
               <Icon name="bookmark" />
               {favorite ? "已收藏" : "收藏"}
             </button>
           </div>
+          <p className="sr-only" role="status">
+            {actionStatus}
+          </p>
           <dl className="metadata">
             {[
               ["Artist / 画家", artwork.artist],
@@ -567,12 +627,9 @@ export default function App() {
     const previous = previousHash.current;
     const previousPath = previous.slice(1).split("?")[0];
     const viewerChange = previous.includes("view=1") || hash.includes("view=1");
-    if (previous !== hash && !viewerChange) {
+    if (previous !== hash && !viewerChange && path !== previousPath) {
       scrollPositions.set(previous, window.scrollY);
-      window.scrollTo(
-        0,
-        path === previousPath ? 0 : scrollPositions.get(hash) || 0,
-      );
+      window.scrollTo(0, scrollPositions.get(hash) || 0);
       mainRef.current?.focus({ preventScroll: true });
     }
     previousHash.current = hash;
@@ -654,9 +711,17 @@ export default function App() {
           ))}
         </nav>
         <div className="header-actions">
-          <button className="random-header" onClick={random}>
+          <button
+            className="random-header"
+            onClick={random}
+            aria-label="随机看一幅作品"
+            title="在馆藏里偶遇一幅画"
+          >
             <Icon name="shuffle" size={18} />
-            <span>随机看一幅</span>
+            <span className="random-full-label">随机看一幅</span>
+            <span className="random-short-label" aria-hidden="true">
+              偶遇
+            </span>
           </button>
           <button
             className="theme-toggle"

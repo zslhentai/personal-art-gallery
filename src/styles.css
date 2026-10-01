@@ -12,11 +12,15 @@
   font-synthesis: none;
   --bg: #f6f4ef;
   --text: #30362f;
-  --muted: #777a70;
+  --muted: #6a6f65;
   --line: #dcded3;
   --accent: #354c3d;
   --image-bg: #ebe9e2;
   --hover: #ebece4;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
   color-scheme: light;
 }
 :root[data-theme="dark"] {
@@ -194,25 +198,25 @@ img {
   outline: none;
 }
 .gallery-intro {
-  padding: 83px 0 76px;
+  padding: 56px 0 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .eyebrow {
   font-size: 10px;
-  letter-spacing: 2.4px;
+  letter-spacing: 1.8px;
   color: var(--muted);
   line-height: 1.8;
   text-transform: uppercase;
 }
 .gallery-intro h1 {
   font-family: "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 400;
   letter-spacing: 5px;
   line-height: 1.5;
-  margin: 24px 0 20px;
+  margin: 20px 0 16px;
 }
 .intro-description {
   font-size: 13px;
@@ -312,15 +316,31 @@ img {
   min-height: 44px;
 }
 .reset-filters {
+  padding: 0;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
   font-size: 11px;
   display: flex;
   align-items: center;
   min-height: 44px;
   white-space: nowrap;
 }
-.disabled {
-  opacity: 0.4;
-  pointer-events: none;
+.reset-filters:disabled {
+  visibility: hidden;
+}
+.filters select[data-active] {
+  border-bottom-color: var(--accent);
+}
+.random-short-label {
+  display: none;
+}
+.filter-chevron {
+  display: inline-flex;
+  transition: transform 150ms ease;
+}
+.filter-toggle[aria-expanded="true"] .filter-chevron {
+  transform: rotate(180deg);
 }
 .filter-toggle {
   display: none;
@@ -333,9 +353,10 @@ img {
 }
 .active-filters button {
   padding: 8px 12px;
-  background: var(--hover);
+  border: 1px solid var(--line);
+  color: var(--accent);
   font-size: 11px;
-  min-height: 36px;
+  min-height: 44px;
 }
 .react-photo-album--row {
   align-items: flex-start !important;
@@ -359,7 +380,7 @@ img {
   height: 100%;
   object-fit: contain;
   opacity: 0;
-  transition: opacity 0.45s;
+  /* Show decoded art at its original contrast, without a gray fade-in. */
 }
 .painting-image.is-loaded img {
   opacity: 1;
@@ -410,6 +431,7 @@ img {
   padding-top: 6px;
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .random-invitation {
   margin: 80px 0 72px;
@@ -603,6 +625,10 @@ img {
   border-bottom: 1px solid var(--line);
 }
 .personal-actions button {
+  min-width: 108px;
+  transition:
+    background-color 120ms,
+    border-color 120ms;
   display: flex;
   gap: 9px;
   align-items: center;
@@ -613,13 +639,13 @@ img {
   font-size: 12px;
 }
 .personal-actions button[aria-pressed="true"] {
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--hover);
+  color: var(--accent);
   border-color: var(--accent);
 }
 .personal-actions button[aria-pressed="true"] svg {
   fill: currentColor;
-  fill-opacity: 0.2;
+  fill-opacity: 1;
 }
 .metadata {
   margin: 26px 0;
@@ -814,11 +840,16 @@ img {
   --pswp-icon-color: #e8ecdf;
   --pswp-icon-color-secondary: #20241f;
 }
+.pswp__top-bar {
+  top: var(--safe-top);
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+}
 .pswp__artwork-caption {
   position: absolute;
-  bottom: max(24px, env(safe-area-inset-bottom));
-  left: 20px;
-  right: 20px;
+  bottom: calc(24px + var(--safe-bottom));
+  left: calc(20px + var(--safe-left));
+  right: calc(20px + var(--safe-right));
   text-align: center;
   color: #dce2d5;
   font-size: 12px;
@@ -853,8 +884,12 @@ img {
   .header-actions {
     gap: 8px;
   }
-  .random-header span {
+  .random-header .random-full-label {
     display: none;
+  }
+  .random-header .random-short-label {
+    display: inline;
+    font-size: 11px;
   }
   .main {
     padding: 0 32px;
@@ -863,7 +898,7 @@ img {
     padding: 0 32px 30px;
   }
   .gallery-intro {
-    padding: 60px 0;
+    padding: 48px 0;
   }
   .gallery-intro h1 {
     font-size: 42px;
@@ -983,18 +1018,18 @@ img {
     padding: 0 20px;
   }
   .gallery-intro {
-    padding: 46px 0 42px;
+    padding: 32px 0 28px;
     align-items: start;
   }
   .gallery-intro .eyebrow {
-    font-size: 8px;
-    letter-spacing: 1.5px;
+    font-size: 9px;
+    letter-spacing: 1.1px;
   }
   .gallery-intro h1 {
-    font-size: 34px;
-    letter-spacing: 3px;
-    margin: 20px 0 16px;
-    line-height: 1.65;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 16px 0 12px;
+    line-height: 1.5;
   }
   .intro-description {
     font-size: 11px;
@@ -1005,7 +1040,7 @@ img {
     display: none;
   }
   .gallery-toolbar {
-    min-height: 58px;
+    min-height: 52px;
   }
   .toolbar-title {
     font-size: 16px;
@@ -1025,25 +1060,28 @@ img {
     width: 100%;
     align-items: center;
     gap: 10px;
-    font-size: 11px;
-    min-height: 58px;
+    font-size: 12px;
+    min-height: 48px;
     padding: 0;
   }
-  .filter-toggle > span {
+  .filter-toggle > .filter-chevron {
     margin-left: auto;
     font-size: 18px;
   }
   .filter-toggle svg {
     width: 16px;
   }
-  .filters {
+  .filter-disclosure {
     display: none;
-    padding: 0 0 24px;
+  }
+  .filter-disclosure.expanded {
+    display: block;
+  }
+  .filters {
+    display: grid;
+    padding: 0 0 20px;
     grid-template-columns: 1fr 1fr;
     gap: 16px 20px;
-  }
-  .filters.expanded {
-    display: grid;
   }
   .filters select {
     font-size: 16px;
@@ -1056,8 +1094,8 @@ img {
   .reset-filters {
     grid-column: 1/-1;
     min-height: 44px;
-    justify-content: center;
-    border: 1px solid var(--line);
+    justify-content: flex-end;
+    border: 0;
   }
   .active-filters {
     padding-bottom: 24px;
@@ -1066,15 +1104,15 @@ img {
     min-height: 44px;
   }
   .card-caption {
-    margin-top: 16px;
-    min-height: 48px;
+    margin-top: 14px;
+    min-height: 52px;
   }
   .card-title {
     font-size: 15px;
     line-height: 1.7;
   }
   .card-caption p {
-    font-size: 11px;
+    font-size: 12px;
     margin-top: 6px;
   }
   .card-year {
@@ -1183,9 +1221,9 @@ img {
   }
   .pswp__artwork-caption {
     font-size: 11px;
-    left: 20px;
-    right: 20px;
-    bottom: max(26px, env(safe-area-inset-bottom));
+    left: calc(20px + var(--safe-left));
+    right: calc(20px + var(--safe-right));
+    bottom: calc(22px + var(--safe-bottom));
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1194,5 +1232,28 @@ img {
   *:after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .site-header,
+  .main,
+  .site-footer {
+    padding-left: max(32px, var(--safe-left));
+    padding-right: max(32px, var(--safe-right));
+  }
+  .site-header {
+    padding-top: max(20px, var(--safe-top));
+  }
+}
+@media (max-width: 600px) {
+  .site-header,
+  .main,
+  .site-footer {
+    padding-left: max(20px, var(--safe-left));
+    padding-right: max(20px, var(--safe-right));
+  }
+  .site-header {
+    padding-top: max(18px, var(--safe-top));
   }
 }
