@@ -20,6 +20,12 @@
 
 浏览器测试曾发现单件结果容器收缩引发 responsive 阈值循环、Viewer 打开动画期间立即返回残留遮罩、索引可访问名不明确；均已修复后重新通过。
 
+## 云端检查
+
+已将相同文件树和提交 `e5e0f80` 上传到远端 `main`，本地与远端 SHA 一致，工作区干净。[首次 GitHub Actions 运行](https://github.com/zslhentai/personal-art-gallery/actions/runs/36862845475) 的 `build` 与 `browser-tests` 均成功，云端执行了完整浏览器测试。仅 `deploy` 在 `actions/configure-pages` 因站点尚未启用返回 404；尚未进入实际发布步骤。直接访问目标 URL 同样为 HTTP 404，故未将目标地址称为已上线。
+
+启用 Source 为 GitHub Actions 后，可在该运行选择 Re-run failed jobs，或从 Actions 手动运行完整工作流。
+
 ## 部署状态与权限限制
 
 工作流 `.github/workflows/pages.yml` 已配置：main 推送／手动运行执行检查和构建，浏览器检查通过后以官方 Pages action 发布；PR 不部署。

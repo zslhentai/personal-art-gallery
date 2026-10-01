@@ -4,7 +4,7 @@
 
 Pages 公开地址：**https://zslhentai.github.io/personal-art-gallery/**
 
-当前集成启用 Pages 时返回权限 403；需管理员按下方部署步骤在 Settings → Pages 选择 GitHub Actions 后发布。此地址在实际部署成功前尚不能视为上线。
+当前集成启用 Pages 时返回权限 403；需管理员按下方部署步骤在 Settings → Pages 选择 GitHub Actions 后发布。本地和云端构建／浏览器检查均通过；首次运行仅发布步骤因 Pages 未启用失败，此地址目前为 HTTP 404。启用后在 [Actions](https://github.com/zslhentai/personal-art-gallery/actions) 重新运行失败的部署任务或手动运行工作流即可发布。
 
 ## 第一版
 
