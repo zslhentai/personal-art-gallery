@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh small WebP previews from verified Met / Commons records; never retain originals.
+"""Refresh small WebP previews from verified Met / Cleveland / Commons records; never retain originals.
 Requires Python 3 and ImageMagick 7 (`magick`). Run from the repository root.
 """
 import json
@@ -25,10 +25,18 @@ with tempfile.TemporaryDirectory(prefix='gallery-images-') as scratch:
                 record = json.load(response)
             if record.get('isPublicDomain') is not True or record.get('primaryImage') != artwork['imageUrl']:
                 raise ValueError(f"{artwork['id']}: Met source or permission changed; review JSON")
+        elif artwork['id'].startswith('cma-'):
+            museum_id = artwork['id'].removeprefix('cma-')
+            with open_source(f'https://openaccess-api.clevelandart.org/api/artworks/{museum_id}') as response:
+                record = json.load(response)['data']
+            if record.get('share_license_status') != 'CC0' or record.get('copyright'):
+                raise ValueError(f"{artwork['id']}: Cleveland permission changed; review JSON")
+            if record.get('images', {}).get('print', {}).get('url') != artwork['imageUrl']:
+                raise ValueError(f"{artwork['id']}: Cleveland print rendition changed; review JSON")
         elif artwork['id'].startswith('commons-'):
             query = urllib.parse.urlencode({
                 'action': 'query', 'format': 'json', 'pageids': artwork['id'].removeprefix('commons-'),
-                'prop': 'imageinfo', 'iiprop': 'url|extmetadata', 'iiurlwidth': 1600,
+                'prop': 'imageinfo', 'iiprop': 'url|extmetadata', 'iiurlwidth': 1920,
             })
             with open_source('https://commons.wikimedia.org/w/api.php?' + query) as response:
                 record = next(iter(json.load(response)['query']['pages'].values()))['imageinfo'][0]

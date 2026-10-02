@@ -126,5 +126,11 @@ test("each artwork has reviewed provenance and unique verified source records", 
     assert.equal(r.verifiedImageHeight, a.height);
     assert.ok(r.checkedAt && r.license && r.metadataSource);
     if (a.id.startsWith("met-")) assert.equal(r.isPublicDomain, true);
+    if (a.id.startsWith("cma-")) {
+      assert.equal(r.shareLicenseStatus, "CC0");
+      assert.equal(r.license, "CC0");
+      assert.equal(r.creatorQualifier, null);
+      assert.ok(r.accessionNumber);
+    }
   }
 });

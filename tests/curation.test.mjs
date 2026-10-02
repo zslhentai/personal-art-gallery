@@ -57,15 +57,16 @@ test("public tags and movement names are concise and consistent", () => {
   assert.equal(canonicalTag("自然"), "风景");
   assert.equal(canonicalTag("constructor"), "constructor");
   for (const a of exhibition) {
-    assert.ok(a.tags.length >= 2 && a.tags.length <= 4);
+    assert.ok(a.tags.length >= 2 && a.tags.length <= 5);
     assert.ok(a.tags.every((tag) => !["自然", "孤独感", "适合壁纸"].includes(tag)));
     assert.notEqual(a.movement, "写实主义");
   }
 });
 
-test("seven short artist wall labels reference existing canonical artists", async () => {
+test("short artist wall labels reference existing canonical artists", async () => {
   const profiles = JSON.parse(await readFile(new URL("../src/data/artists.json", import.meta.url), "utf8"));
-  assert.equal(profiles.length, 7);
+  assert.ok(profiles.length >= 7);
+  assert.ok(new Set(records.flatMap((a) => a.tags)).size <= 36);
   assert.equal(new Set(profiles.map((p) => p.artistSlug)).size, profiles.length);
   for (const p of profiles) {
     assert.ok(records.some((a) => a.artistSlug === p.artistSlug));

@@ -50,3 +50,31 @@ test("new licensed artwork retains license, favorites, on-demand viewer and orig
   await expect(page.locator(".pswp")).toHaveCount(0);
   await expect(page).toHaveURL(new RegExp(`/artwork/${art.slug}$`));
 });
+
+for (const id of ["cma-136760", "met-45434"]) {
+  test(`new museum source ${id} loads high resolution on demand and saves the verified original`, async ({ page }) => {
+    const art = artworks.find((a) => a.id === id)!;
+    const originals: string[] = [];
+    page.on("request", (request) => { if (request.url() === art.imageUrl) originals.push(request.url()); });
+    await page.goto(`${base}#/artwork/${art.slug}`);
+    await expect(page.getByRole("heading", { name: art.titleZh, exact: true })).toBeVisible();
+    await expect(page.getByText(art.rights, { exact: true })).toBeVisible();
+    expect(originals).toHaveLength(0);
+    await page.getByRole("button", { name: /高清查看/ }).click();
+    const image = page.locator(".pswp__item").nth(1).locator("img.pswp__img");
+    await expect(image).toHaveJSProperty("naturalWidth", art.width, { timeout: 45000 });
+    const pending = new Promise<Download | Page>((resolve) => {
+      page.once("download", resolve);
+      page.once("popup", resolve);
+    });
+    await page.getByRole("button", { name: `保存作品《${art.titleZh}》`, exact: true }).click();
+    const result = await pending;
+    if ("suggestedFilename" in result) expect(result.suggestedFilename()).toMatch(/\.jpg$/);
+    else {
+      await result.waitForURL((url) => url.href === art.imageUrl, { waitUntil: "commit" });
+      await result.close();
+    }
+    await page.getByRole("button", { name: "关闭大图" }).click();
+    await expect(page).toHaveURL(new RegExp(`/artwork/${art.slug}$`));
+  });
+}

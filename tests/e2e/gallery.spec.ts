@@ -21,6 +21,7 @@ test("gallery has complete images, responsive layout, valid navigation and no br
     await card.scrollIntoViewIfNeeded();
     await expect(card.locator("img")).toHaveJSProperty("complete", true);
     await expect(card.locator("img")).not.toHaveJSProperty("naturalWidth", 0);
+    await expect(card.locator("img")).toHaveCSS("opacity", "1");
     const metrics = await card.locator("img").evaluate((img) => ({
       ratio:
         img.getBoundingClientRect().width / img.getBoundingClientRect().height,

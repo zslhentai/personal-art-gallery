@@ -40,5 +40,125 @@
     "lifespan": "1775–1851",
     "description": "让船、城市与远景融入光、雾和风暴。",
     "sourceUrl": "https://www.wikidata.org/wiki/Q159758"
+  },
+  {
+    "artistSlug": "camille-pissarro",
+    "lifespan": "1830–1903",
+    "description": "让乡村劳动与城市街道，在光线和季节中缓缓展开。",
+    "sourceUrl": "https://www.clevelandart.org/art/2020.113"
+  },
+  {
+    "artistSlug": "alfred-sisley",
+    "lifespan": "1840–1899",
+    "description": "以河岸、桥梁与天空，记录近郊风景的清澈光色。",
+    "sourceUrl": "https://www.clevelandart.org/art/1961.262"
+  },
+  {
+    "artistSlug": "berthe-morisot",
+    "lifespan": "1841–1895",
+    "description": "用轻盈笔触描绘窗边、花园与女性的日常片刻。",
+    "sourceUrl": "https://www.clevelandart.org/art/1950.89"
+  },
+  {
+    "artistSlug": "mary-cassatt",
+    "lifespan": "1844–1926",
+    "description": "将母子相处与女性生活，凝成亲密而平静的画面。",
+    "sourceUrl": "https://www.clevelandart.org/art/1920.379"
+  },
+  {
+    "artistSlug": "paul-gauguin",
+    "lifespan": "1848–1903",
+    "description": "以平涂色块和象征性人物，构成遥远风景中的内心世界。",
+    "sourceUrl": "https://www.clevelandart.org/art/1978.63"
+  },
+  {
+    "artistSlug": "john-constable",
+    "lifespan": "1776–1837",
+    "description": "在田野与云层之间，细看英国乡村的天气和光。",
+    "sourceUrl": "https://www.clevelandart.org/art/1972.48"
+  },
+  {
+    "artistSlug": "frederic-edwin-church",
+    "lifespan": "1826–1900",
+    "description": "让壮阔山川与细密观察，在光线变化中相遇。",
+    "sourceUrl": "https://www.clevelandart.org/art/1965.233"
+  },
+  {
+    "artistSlug": "albert-bierstadt",
+    "lifespan": "1830–1902",
+    "description": "描绘山谷、巨峰与远方的光，展现北美自然的尺度。",
+    "sourceUrl": "https://www.clevelandart.org/art/1922.684"
+  },
+  {
+    "artistSlug": "jacob-van-ruisdael",
+    "lifespan": "1628–1682",
+    "description": "在云影、树林与急流中，呈现风景的力量与宁静。",
+    "sourceUrl": "https://www.clevelandart.org/art/1967.19"
+  },
+  {
+    "artistSlug": "meindert-hobbema",
+    "lifespan": "1638–1709",
+    "description": "林荫道、水磨与乡间小路，通向安静的荷兰风景。",
+    "sourceUrl": "https://api.artic.edu/api/v1/artworks/869"
+  },
+  {
+    "artistSlug": "peter-paul-rubens",
+    "lifespan": "1577–1640",
+    "description": "以流动构图与饱满色彩，描绘人物、神话和历史。",
+    "sourceUrl": "https://www.clevelandart.org/art/1947.207"
+  },
+  {
+    "artistSlug": "jean-francois-millet",
+    "lifespan": "1814–1875",
+    "description": "让农人的劳动与停顿，成为乡野中朴素的主角。",
+    "sourceUrl": "https://www.clevelandart.org/art/1972.19"
+  },
+  {
+    "artistSlug": "winslow-homer",
+    "lifespan": "1836–1910",
+    "description": "在海浪、船只与日常劳动之间，注视人与自然的关系。",
+    "sourceUrl": "https://www.clevelandart.org/art/1924.195"
+  },
+  {
+    "artistSlug": "odilon-redon",
+    "lifespan": "1840–1916",
+    "description": "以花卉、梦境与奇异面孔，打开现实之外的想象。",
+    "sourceUrl": "https://www.clevelandart.org/art/1988.91"
+  },
+  {
+    "artistSlug": "arnold-bocklin",
+    "lifespan": "1827–1901",
+    "description": "让海岸、废墟与神话，构成静默而神秘的世界。",
+    "sourceUrl": "https://www.clevelandart.org/art/1979.57"
+  },
+  {
+    "artistSlug": "john-singer-sargent",
+    "lifespan": "1856–1925",
+    "description": "用敏捷笔触与光色，捕捉面孔、衣饰和人物神态。",
+    "sourceUrl": "https://www.clevelandart.org/art/1998.168"
+  },
+  {
+    "artistSlug": "james-mcneill-whistler",
+    "lifespan": "1834–1903",
+    "description": "以柔和色调和简练构图，让肖像与夜色如音乐般安静。",
+    "sourceUrl": "https://www.clevelandart.org/art/1942.1133"
+  },
+  {
+    "artistSlug": "katsushika-hokusai",
+    "lifespan": "1760–1849",
+    "description": "以木版的线条和色面，描绘海浪、富士山与自然细节。",
+    "sourceUrl": "https://www.clevelandart.org/art/1930.189"
+  },
+  {
+    "artistSlug": "utagawa-hiroshige",
+    "lifespan": "1797–1858",
+    "description": "从雨、雪与薄雾中，发现旅途和城市的诗意。",
+    "sourceUrl": "https://www.clevelandart.org/art/1921.318"
+  },
+  {
+    "artistSlug": "jean-honore-fragonard",
+    "lifespan": "1732–1806",
+    "description": "以轻快笔触描绘人物与花园，留下亲昵和想象的瞬间。",
+    "sourceUrl": "https://www.clevelandart.org/art/1942.49"
   }
 ]

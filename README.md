@@ -6,6 +6,8 @@ Pages 公开地址：**https://zslhentai.github.io/personal-art-gallery/**
 
 GitHub Pages 已启用，公开地址实测返回 HTTP 200。每次推送 main 经检查后自动部署；发布结果见 [Actions](https://github.com/zslhentai/personal-art-gallery/actions)。
 
+当前馆藏 **190件、67位画家、34个标签**。
+
 ## 第一版
 
 - 桌面 Rows / Justified、390px 手机单列；预览不裁切，有比例占位及懒加载。
@@ -13,7 +15,7 @@ GitHub Pages 已启用，公开地址实测返回 HTTP 200。每次推送 main �
 - PhotoSwipe v5：高清加载、双指缩放、拖动、左右切换、桌面滚轮／点击缩放、ESC／返回关闭。
 - 画家、流派、年代、标签可组合筛选；画家与标签独立索引。
 - 独立的喜欢和收藏，个人备注，保存在当前浏览器；明暗主题。
-- 手工策展顺序，穿插画家、题材和明暗；七位核心画家的极短墙签。
+- 手工策展顺序，穿插画家、题材和明暗；27位画家的极短墙签。
 - 随机看一幅，会话中避开最近五幅及上一位画家。
 - 开放作品高清保存，iOS / 跨域限制时打开原图；喜欢、收藏和备注 JSON 备份／合并导入。
 - PWA 主屏幕入口与轻量离线界面，更新前主动提示，不缓存高清画作。
@@ -74,9 +76,9 @@ Manifest、图标和构建生成的 Service Worker 均使用仓库子路径；HT
 
 `width/height` 是实际原图像素；`dimensions` 是实体画作尺寸；`aspectRatio = width / height`。保留 `year` 原文显示和 `yearStart/yearEnd` 数值区间（年代筛选按起始年）。新增标签和画家自动进入索引和筛选，不另写页面。
 
-`curationOrder` 为必填、唯一的正整数。当前按 10、20、30… 编排，插入新作品可选两者间的空序号。JSON 记录顺序不决定首页；画廊、筛选及相邻浏览使用同一策展顺序。每件标签控制在 2–4 个，复用现有词；流派使用独立 `movement`。核心画家墙签保存在 `src/data/artists.json`，姓名和馆藏数量仍从作品数据获取。
+`curationOrder` 为必填、唯一的正整数。当前按 10、20、30… 编排，插入新作品可选两者间的空序号。JSON 记录顺序不决定首页；画廊、筛选及相邻浏览使用同一策展顺序。每件标签控制在 2–5 个，复用现有词；流派使用独立 `movement`。核心画家墙签保存在 `src/data/artists.json`，姓名和馆藏数量仍从作品数据获取。标签封面可在 `src/data/tag-covers.json` 用 `tag` + `coverArtworkId` 指定，作品必须属于该标签；未指定时自动稳定选取，优先避免重复。
 
-预览存为 `public/images/{slug}-400.webp`、`-800.webp`、`-1200.webp`，保留全构图，不放大低分辨率来源。详情和列表通过 `srcset` 选择尺寸；`imageUrl` 为外部官方高清图，`imageSourceUrl` 解释来源。全部预览总计约 18.97 MiB，高清原图未入库。Met / Commons 预览可用 `python3 scripts/refresh-previews.py` 重新核对并生成，需要 Python 3 与 ImageMagick 7。
+预览存为 `public/images/{slug}-400.webp`、`-800.webp`、`-1200.webp`，保留全构图，不放大低分辨率来源。详情和列表通过 `srcset` 选择尺寸；`imageUrl` 为外部机构或 Commons 的已核实高清图，`imageSourceUrl` 解释来源。全部预览总计约 48.19 MiB，高清原图未入库。Met / Cleveland / Commons 预览可用 `python3 scripts/refresh-previews.py` 重新核对并生成，需要 Python 3 与 ImageMagick 7。
 
 默认 `favorite:false`、`notes:""`；用户的喜欢、收藏和备注另存于 `personal-art-gallery:library:v1` 的 localStorage 中。它们不会修改公开馆藏，不自动跨设备同步；清除站点数据会移除个人状态。可从收藏页或页脚进入“备份与安装”，先导出 JSON，再在新设备预览并确认合并导入；已有非空备注优先保留。iPhone 可通过 Safari 分享菜单添加到主屏幕。
 
@@ -87,6 +89,8 @@ Manifest、图标和构建生成的 Service Worker 均使用仓库子路径；HT
 本轮 10 → 62 件馆藏、版本取舍、未收录作品、来源与性能记录见 [docs/collection-expansion.md](docs/collection-expansion.md)；逐件来源台账见 [docs/collection-sources.json](docs/collection-sources.json)。
 
 62 件作品的策展审查、前 20 件顺序、标签清理、画家墙签及 Random 弱去重见 [docs/curation-review.md](docs/curation-review.md)。
+
+62 → 190件扩馆、逐件来源取舍、全馆策展、标签封面与性能记录见 [docs/collection-200.md](docs/collection-200.md)。
 
 高清保存、备份结构／导入策略、PWA 缓存与更新、验证边界见 [docs/personal-tools.md](docs/personal-tools.md)。
 

@@ -26,6 +26,8 @@ import Viewer from "./Viewer";
 import SaveArtwork from "./SaveArtwork";
 import { canonicalTag, randomArtwork } from "./curation";
 import artistProfiles from "./data/artists.json";
+import tagCoverOverrides from "./data/tag-covers.json";
+import { selectTagCovers } from "./tagCovers";
 import { usePwa, applyPwaUpdate } from "./pwa";
 const MyGallery = lazy(() =>
   import("./MyGallery").catch(() => ({
@@ -573,6 +575,7 @@ function IndexPage({ type }: { type: "artists" | "tags" }) {
     new Map(artworks.map((a) => [a.artistSlug, a])).values(),
   );
   const tags = [...new Set(artworks.flatMap((a) => a.tags))];
+  const tagCovers = selectTagCovers(artworks, tags, tagCoverOverrides);
   return (
     <>
       <SectionHeading
@@ -591,7 +594,7 @@ function IndexPage({ type }: { type: "artists" | "tags" }) {
           const matches = artworks.filter((a) =>
             isArtist ? a.artistSlug === key : a.tags.includes(key),
           );
-          const representative = matches[0];
+          const representative = isArtist ? matches[0] : tagCovers.get(key)!;
           const profile = isArtist
             ? artistProfiles.find((a) => a.artistSlug === key)
             : undefined;

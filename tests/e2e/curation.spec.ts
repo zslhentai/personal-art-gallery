@@ -11,6 +11,7 @@ test("exhibition and filtered views keep curation order; old tag links remain me
   for (const [label, index] of [["first", 0], ["opening-middle", 9], ["opening-end", 19]] as const) {
     await page.locator(".artwork-card").nth(index).scrollIntoViewIfNeeded();
     await expect(page.locator(".artwork-card img").nth(index)).not.toHaveJSProperty("naturalWidth", 0);
+    await expect(page.locator(".artwork-card img").nth(index)).toHaveCSS("opacity", "1");
     await page.screenshot({ path: `test-results/curation-${test.info().project.name}-${label}.png` });
   }
   await page.goto(`${base}#/?artist=claude-monet`);
@@ -29,8 +30,8 @@ test("exhibition and filtered views keep curation order; old tag links remain me
 
 test("artist wall labels stay short, counted and usable on a narrow screen", async ({ page }) => {
   await page.goto(`${base}#/artists`);
-  await expect(page.locator(".index-item")).toHaveCount(17);
-  await expect(page.locator(".artist-wall-label")).toHaveCount(7);
+  await expect(page.locator(".index-item")).toHaveCount(new Set(records.map((a) => a.artistSlug)).size);
+  await expect(page.locator(".artist-wall-label")).toHaveCount(profiles.length);
   for (const profile of profiles) {
     const artist = records.find((a) => a.artistSlug === profile.artistSlug)!;
     const count = records.filter((a) => a.artistSlug === profile.artistSlug).length;
@@ -45,7 +46,7 @@ test("artist wall labels stay short, counted and usable on a narrow screen", asy
     await expect(item.locator("img")).not.toHaveJSProperty("naturalWidth", 0);
   }
   await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: `test-results/curation-${test.info().project.name}-artists.png`, fullPage: true });
+  await page.screenshot({ path: `test-results/curation-${test.info().project.name}-artists.png`, fullPage: await page.evaluate(() => Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) * devicePixelRatio < 32767) });
   await page.getByRole("link", { name: /卡斯帕·大卫·弗里德里希/ }).click();
   await expect(page.locator(".artwork-card")).toHaveCount(3);
 });
@@ -67,7 +68,26 @@ test("repeated encounters avoid the current artist and recent works across galle
     last = next;
     if (i === 3) {
       await page.locator(".main-nav").getByRole("link", { name: "画廊", exact: true }).click();
-      await expect(page.locator(".artwork-card")).toHaveCount(62);
+      await expect(page.locator(".artwork-card")).toHaveCount(records.length);
     }
   }
+});
+
+test("tag covers remain distinct and stable across refresh and dark mode", async ({ page }) => {
+  await page.goto(`${base}#/tags`);
+  const items = page.locator(".index-item");
+  const images = items.locator("img");
+  const sources = await images.evaluateAll((els) => els.map((el) => el.getAttribute("src")));
+  expect(new Set(sources).size).toBe(sources.length);
+  for (const item of await items.all()) {
+    await item.scrollIntoViewIfNeeded();
+    await expect(item.locator("img")).not.toHaveJSProperty("naturalWidth", 0);
+  }
+  await page.reload();
+  expect(await images.evaluateAll((els) => els.map((el) => el.getAttribute("src")))).toEqual(sources);
+  await page.getByRole("button", { name: "切换深色模式" }).click();
+  expect(await images.evaluateAll((els) => els.map((el) => el.getAttribute("src")))).toEqual(sources);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({ path: `test-results/tag-covers-${test.info().project.name}.png` });
 });
