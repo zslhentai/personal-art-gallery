@@ -76,7 +76,7 @@ Manifest、图标和构建生成的 Service Worker 均使用仓库子路径；HT
 
 `width/height` 是实际原图像素；`dimensions` 是实体画作尺寸；`aspectRatio = width / height`。保留 `year` 原文显示和 `yearStart/yearEnd` 数值区间（年代筛选按起始年）。新增标签和画家自动进入索引和筛选，不另写页面。
 
-`curationOrder` 为必填、唯一的正整数。当前按 10、20、30… 编排，插入新作品可选两者间的空序号。JSON 记录顺序不决定首页；画廊、筛选及相邻浏览使用同一策展顺序。每件标签控制在 2–5 个，复用现有词；流派使用独立 `movement`。核心画家墙签保存在 `src/data/artists.json`，姓名和馆藏数量仍从作品数据获取。标签封面可在 `src/data/tag-covers.json` 用 `tag` + `coverArtworkId` 指定，作品必须属于该标签；未指定时自动稳定选取，优先避免重复。
+`curationOrder` 为必填、唯一的正整数。当前按 10、20、30… 编排，插入新作品可选两者间的空序号。JSON 记录顺序不决定首页；画廊、筛选及相邻浏览使用同一策展顺序。每件标签控制在 2–5 个，复用现有词；流派使用独立 `movement`。独立画家档案保存在 `src/data/artists.json`，馆藏数量从作品数据实时计算；画家名录与作品作者入口打开 `#/artist/<artistSlug>`。新增画家应同步补齐姓名、生卒、短墙签、生平、来源与肖像信息，构建会校验数据一致性。可靠肖像缺失时明确记录原因，不用作品封面代替。详见 [画家档案与 Hero 精修](docs/artist-archives.md)。标签封面可在 `src/data/tag-covers.json` 用 `tag` + `coverArtworkId` 指定，作品必须属于该标签；未指定时自动稳定选取，优先避免重复。
 
 预览存为 `public/images/{slug}-400.webp`、`-800.webp`、`-1200.webp`，保留全构图，不放大低分辨率来源。详情和列表通过 `srcset` 选择尺寸；`imageUrl` 为外部机构或 Commons 的已核实高清图，`imageSourceUrl` 解释来源。全部预览总计约 48.19 MiB，高清原图未入库。Met / Cleveland / Commons 预览可用 `python3 scripts/refresh-previews.py` 重新核对并生成，需要 Python 3 与 ImageMagick 7。
 

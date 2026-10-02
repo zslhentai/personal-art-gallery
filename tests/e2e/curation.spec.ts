@@ -43,7 +43,9 @@ test("artist wall labels stay short, counted and usable on a narrow screen", asy
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   for (const item of await page.locator(".index-item").all()) {
     await item.scrollIntoViewIfNeeded();
-    await expect(item.locator("img")).not.toHaveJSProperty("naturalWidth", 0);
+    if (await item.locator("img").count())
+      await expect(item.locator("img")).not.toHaveJSProperty("naturalWidth", 0);
+    else await expect(item.locator(".portrait-unavailable")).toHaveText("肖像待考");
   }
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: `test-results/curation-${test.info().project.name}-artists.png`, fullPage: await page.evaluate(() => Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) * devicePixelRatio < 32767) });

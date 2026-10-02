@@ -257,7 +257,7 @@ test("compact mobile entrance stays usable at 375, 390 and 430 pixels", async ({
       page.getByRole("button", { name: "随机看一幅作品" }),
     ).toBeVisible();
     const first = await page.locator(".artwork-card img").first().boundingBox();
-    expect(first!.y).toBeLessThan(480);
+    expect(first!.y).toBeLessThan(420);
     expect(first!.width).toBeCloseTo(width - 40, 0);
     expect(
       await page.evaluate(

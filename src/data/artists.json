@@ -1,164 +1,2158 @@
 [
   {
-    "artistSlug": "claude-monet",
-    "lifespan": "1840–1926",
-    "description": "在花园、水面与城市之间，反复捕捉光线改变的一瞬。",
-    "sourceUrl": "https://www.wikidata.org/wiki/Q296"
-  },
-  {
     "artistSlug": "vincent-van-gogh",
+    "nameZh": "文森特·梵高",
+    "nameOriginal": "Vincent van Gogh",
+    "birthYear": 1853,
+    "deathYear": 1890,
     "lifespan": "1853–1890",
-    "description": "以鲜明色彩与有力笔触，将日常风景画成内心的回声。",
-    "sourceUrl": "https://www.wikidata.org/wiki/Q5582"
+    "nationality": "荷兰 · 主要活跃于法国",
+    "movement": "后印象派",
+    "description": "以鲜明色彩和旋转笔触，让风景成为情绪的回声。",
+    "biography": "梵高出生于荷兰，年轻时做过艺术品商和传教工作，二十多岁才决定成为画家。早期作品关注农民与劳动，色调沉厚；1886年移居巴黎后，他接触印象派和日本版画，画面逐渐转向明亮、鲜活的色彩。弟弟提奥长期提供经济支持，两人的书信也保存了他的创作思考。\n\n从阿尔勒的向日葵，到圣雷米的柏树，再到奥维尔的田野，他以密集而有方向感的笔触重组眼前世界。贫困与精神困扰伴随其晚年，但不能概括他全部的艺术。生前声名有限的梵高，在去世后深刻影响了表现主义与现代绘画。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Vincent_van_Gogh"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5582"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/vincent-van-gogh"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/vincent-van-gogh-1853-1890"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+    "portraitUrl": "portraits/vincent-van-gogh-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "vilhelm-hammersh-i",
+    "nameZh": "维尔赫姆·哈默修伊",
+    "nameOriginal": "Vilhelm Hammershøi",
+    "birthYear": 1864,
+    "deathYear": 1916,
     "lifespan": "1864–1916",
-    "description": "灰色的房间、窗光与背影，让寻常室内留下漫长的安静。",
-    "sourceUrl": "https://www.wikidata.org/wiki/Q380706"
+    "nationality": "丹麦",
+    "movement": "象征主义",
+    "description": "让灰色房间、窗光与背影，留下日常生活的安静。",
+    "biography": "哈默修伊出生于哥本哈根，先后接受丹麦皇家美术学院和自由艺术学校的训练。他画过肖像、建筑与风景，最为人熟悉的却是自家房间：敞开的门、空墙、窗边的光，以及常常背对观众的妻子伊达。他并不依靠戏剧性的故事，而让寻常空间成为观看的中心。\n\n十九世纪末，他参与独立展览，作品也逐渐获得海外关注。灰、白、褐色之间细微的变化，克制的构图和略显疏离的人物，使这些室内既具体又难以解释。与同时代热闹的城市图景相比，他为现代绘画留下了一种缓慢而内省的观看方式。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Vilhelm_Hammersh%C3%B8i"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q380706"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/vilhelm-hammershoi"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Vilhelm_Hammersh%C3%B8i",
+    "portraitUrl": "portraits/vilhelm-hammersh-i-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Vilhelm_Hammersh%C3%B8i,_by_Vilhelm_Hammersh%C3%B8i.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
-    "artistSlug": "johannes-vermeer",
-    "lifespan": "1632–1675",
-    "description": "让窗边的光落在人物与器物上，凝住日常生活的片刻。",
-    "sourceUrl": "https://www.wikidata.org/wiki/Q41264"
+    "artistSlug": "auguste-renoir",
+    "nameZh": "皮埃尔-奥古斯特·雷诺阿",
+    "nameOriginal": "Auguste Renoir",
+    "birthYear": 1841,
+    "deathYear": 1919,
+    "lifespan": "1841–1919",
+    "nationality": "法国",
+    "movement": "印象派",
+    "description": "以温暖光色，描绘人物相聚与日常生活的愉悦。",
+    "biography": "雷诺阿出生于法国利摩日，少年时为瓷器绘制装饰，后来到巴黎学习绘画，并结识莫奈、西斯莱等人。他参加早期印象派展览，用细碎的笔触和相互映照的颜色，描绘舞会、剧院、河边聚会与亲密的人物关系，让现代生活成为值得认真观看的题材。\n\n1881年的意大利之行使他重新思考拉斐尔和古典艺术，画面逐渐加强轮廓与人物体积。晚年虽受到关节炎困扰，他仍持续创作。他的艺术既保留印象派对光线的敏感，也始终关心身体、触感与相聚的温度，在现代绘画与古典人物传统之间形成了自己的语言。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q39931"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/pierre-auguste-renoir"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
+    "portraitUrl": "portraits/auguste-renoir-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Pierre_Auguste_Renoir,_uncropped_image.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
-    "artistSlug": "caspar-david-friedrich",
-    "lifespan": "1774–1840",
-    "description": "将背影置于山海与薄雾之间，让风景承载沉思。",
-    "sourceUrl": "https://www.wikidata.org/wiki/Q104884"
+    "artistSlug": "georges-seurat",
+    "nameZh": "乔治·修拉",
+    "nameOriginal": "Georges Seurat",
+    "birthYear": 1859,
+    "deathYear": 1891,
+    "lifespan": "1859–1891",
+    "nationality": "法国",
+    "movement": "新印象派",
+    "description": "以细密色点和严整结构，凝住现代生活的片刻。",
+    "biography": "修拉出生于巴黎，接受学院式绘画训练，同时研究当时的色彩与视觉理论。他没有延续印象派看似即兴的笔触，而以相邻的纯色色点建立光色关系，再通过大量习作组织人物和空间。《大碗岛的星期天下午》把城市休闲场景转化为近乎纪念碑式的秩序。\n\n他也使用孔泰蜡笔作画，以细腻的明暗塑造人物轮廓。修拉与西涅克共同推动新印象派，使观看颜色的方式成为创作方法的一部分。他在三十一岁时去世，创作生涯短暂，却把科学探索与严密构图结合起来，为后来的现代绘画提供了重要的形式启发。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Georges_Seurat"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q34013"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/georges-seurat"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Georges_Seurat",
+    "portraitUrl": "portraits/georges-seurat-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_1888.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "jacques-louis-david",
+    "nameZh": "雅克-路易·大卫",
+    "nameOriginal": "Jacques Louis David",
+    "birthYear": 1748,
+    "deathYear": 1825,
+    "lifespan": "1748–1825",
+    "nationality": "法国 · 晚年居于布鲁塞尔",
+    "movement": "新古典主义",
+    "description": "以清晰轮廓和古典姿态，将历史化为公共戏剧。",
+    "biography": "大卫出生于巴黎，在罗马研习古代艺术后，成为法国新古典主义的重要画家。他以清晰的轮廓、严整的空间和富于道德意味的历史题材，回应十八世纪末对古典秩序的重新向往。《荷拉斯兄弟之誓》以及《马拉之死》，让画面同时具有身体的真实与公共事件的力量。\n\n他的生涯与法国大革命、拿破仑政权紧密相连：既参与革命政治，也为皇帝建立视觉形象。拿破仑倒台后，他流亡布鲁塞尔，继续画肖像和神话题材。大卫及其画室影响了十九世纪法国学院绘画，也让我们看见艺术如何参与塑造时代的自我认识。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Jacques-Louis_David"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q83155"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/jacques-louis-david"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+    "portraitUrl": "portraits/jacques-louis-david-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:David_Self_Portrait.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "rembrandt",
+    "nameZh": "伦勃朗",
+    "nameOriginal": "Rembrandt",
+    "birthYear": 1606,
+    "deathYear": 1669,
     "lifespan": "1606–1669",
-    "description": "以深厚暗部与温暖光线，注视面孔、岁月和人的处境。",
-    "sourceUrl": "https://www.wikidata.org/wiki/Q5598"
+    "nationality": "荷兰",
+    "movement": "巴洛克",
+    "description": "以深厚暗部和温暖光线，注视面孔、岁月与人的处境。",
+    "biography": "伦勃朗出生于莱顿，年轻时学习历史画，随后移居阿姆斯特丹，在繁荣的市民社会中获得肖像委托。他的题材跨越圣经、历史、日常生活与自画像，也以蚀刻版画和素描探索光线与人物表情。强烈的明暗并非只是效果，而是引导我们注意动作、目光和内心处境的方式。\n\n职业成功之后，丧亲与经济困难改变了他的生活，晚期画面也变得更厚重、含蓄。他一生反复描绘自己的面容，不回避年龄留下的痕迹。作为荷兰黄金时代的重要艺术家，他把肖像从社会身份的记录，拓展为对人的脆弱、尊严与时间的深刻观察。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Rembrandt"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5598"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/rembrandt"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Rembrandt",
+    "portraitUrl": "portraits/rembrandt-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "honor-daumier",
+    "nameZh": "奥诺雷·杜米埃",
+    "nameOriginal": "Honoré Daumier",
+    "birthYear": 1808,
+    "deathYear": 1879,
+    "lifespan": "1808–1879",
+    "nationality": "法国",
+    "movement": "现实主义",
+    "description": "以有力线条和深厚暗部，凝视普通人的生活与处境。",
+    "biography": "杜米埃出生于马赛，少年时随家人来到巴黎，早早开始工作。他以报刊石版画和政治讽刺获得声名，描绘法官、政客、市民与街头生活，并曾因讽刺当权者入狱。他敏锐地观察人的姿态，用夸张而准确的形体揭示权力关系，也保留对普通人的同情。\n\n除版画之外，他持续创作油画、素描和雕塑，关注乘车、劳动与家庭等现代题材。与报刊作品相比，这些绘画在生前受到的注意较少。他厚重的明暗、简练的轮廓和对社会现实的关切，使讽刺与严肃绘画相互贯通，也为后来的现实主义和现代人物画提供了重要启发。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Honor%C3%A9_Daumier"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q187506"
+      },
+      {
+        "label": "克利夫兰美术馆 · 作者生平",
+        "url": "https://www.clevelandart.org/art/1958.23"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Honor%C3%A9_Daumier",
+    "portraitUrl": "portraits/honor-daumier-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Honor%C3%A9_Daumier_c1850_-_crop.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "claude-monet",
+    "nameZh": "克洛德·莫奈",
+    "nameOriginal": "Claude Monet",
+    "birthYear": 1840,
+    "deathYear": 1926,
+    "lifespan": "1840–1926",
+    "nationality": "法国",
+    "movement": "印象派",
+    "description": "在花园、水面与城市之间，捕捉光线改变的一瞬。",
+    "biography": "莫奈出生于巴黎，在勒阿弗尔长大，年轻时受布丹引导开始户外写生。他与雷诺阿、西斯莱等画家共同探索直接观察的画法；1874年首次印象派展览中，《印象·日出》的标题意外成为整个流派名称的来源。早年的生活并不宽裕，他不断在旅行、家庭与创作之间寻找立足之处。\n\n1883年起，他住在吉维尼，亲手经营花园与睡莲池。干草垛、鲁昂教堂和睡莲等系列，并非简单重复同一景物，而是在比较季节、天气与时间怎样改变观看。晚年大型睡莲画逐渐弱化地平线，让水面、倒影与色彩包围观众，也为现代绘画开辟了新的空间经验。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Claude_Monet"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q296"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/claude-monet"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Claude_Monet",
+    "portraitUrl": "portraits/claude-monet-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar_crop.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "grant-wood",
+    "nameZh": "格兰特·伍德",
+    "nameOriginal": "Grant Wood",
+    "birthYear": 1891,
+    "deathYear": 1942,
+    "lifespan": "1891–1942",
+    "nationality": "美国",
+    "movement": "美国地域主义",
+    "description": "以精确轮廓和克制神情，描绘美国中西部的生活。",
+    "biography": "格兰特·伍德出生于美国艾奥瓦州，家乡的农场、小镇与人们的生活成为他长期的题材。他曾到欧洲学习和旅行，受到北方文艺复兴精细画法的吸引，逐渐从较松散的笔触转向清晰的轮廓、平整的形体和细致的表面描写。《美国哥特式》使他广为人知。\n\n他与本顿、柯里同属美国地域主义的重要画家，将艺术的目光从大都市转向地方生活。不过，这些看似朴素的画面并不只有怀旧：人物的姿态、建筑的尖角和几何化的田野，常留下含蓄的幽默与不确定感。他的作品帮助塑造了二十世纪美国对乡土身份的复杂想象。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Grant_Wood"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q217434"
+      },
+      {
+        "label": "芝加哥艺术博物馆 · 艺术家档案",
+        "url": "https://www.artic.edu/artists/37343/grant-wood"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Grant_Wood",
+    "portraitUrl": "",
+    "portraitSourceUrl": "",
+    "portraitRights": "",
+    "portraitCaption": "",
+    "portraitMissingReason": "常见的1932年自画像尚未核实美国公版依据，暂不采用。"
+  },
+  {
+    "artistSlug": "gustav-klimt",
+    "nameZh": "古斯塔夫·克里姆特",
+    "nameOriginal": "Gustav Klimt",
+    "birthYear": 1862,
+    "deathYear": 1918,
+    "lifespan": "1862–1918",
+    "nationality": "奥地利",
+    "movement": "维也纳分离派",
+    "description": "以金色纹样和装饰线条，让人物进入象征的世界。",
+    "biography": "克里姆特出生于维也纳附近，早年接受装饰艺术训练，并参与建筑壁画委托。1897年，他成为维也纳分离派的创始成员与首任主席，试图为奥地利艺术争取更开放的展览空间。后来大学壁画引发争议，他逐渐转向私人肖像、寓意画与风景。\n\n在著名的金色时期，他把金箔、几何纹样与人物肌肤并置，让写实形体融入装饰性的平面。《吻》是这一语言的代表。日本艺术和镶嵌画也为他提供了启发。他对身体、欲望与象征的探索深刻影响了席勒，使维也纳世纪之交的绘画在华丽表面之下保留紧张与不安。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Gustav_Klimt"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q34661"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/gustav-klimt"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Gustav_Klimt",
+    "portraitUrl": "portraits/gustav-klimt-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Klimt.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "johannes-vermeer",
+    "nameZh": "约翰内斯·维米尔",
+    "nameOriginal": "Johannes Vermeer",
+    "birthYear": 1632,
+    "deathYear": 1675,
+    "lifespan": "1632–1675",
+    "nationality": "荷兰",
+    "movement": "巴洛克",
+    "description": "让窗边的光落在人物与器物上，凝住日常的片刻。",
+    "biography": "维米尔出生并主要生活在代尔夫特，既从事绘画，也参与艺术品交易。1653年，他加入当地圣卢克画家行会。他留下的作品数量不多，成熟时期尤其关注室内生活：读信、奏乐、劳作的女性，安静的家具，以及从窗边进入的柔和光线。细致的空间安排使日常动作显得格外专注。\n\n他的生前声名主要限于当地，晚年遭遇经济困难，去世后家人背负债务。十九世纪的研究与收藏重新带来广泛关注，今天他被视为荷兰黄金时代的重要画家。关于其师承和光学工具的使用仍有讨论；这份档案不把推测当作事实，也不以身份存疑的人物充当他的确定肖像。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Johannes_Vermeer"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q41264"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/johannes-vermeer"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Johannes_Vermeer",
+    "portraitUrl": "",
+    "portraitSourceUrl": "",
+    "portraitRights": "",
+    "portraitCaption": "",
+    "portraitMissingReason": "常见的《鸨母》人物裁切仅被推测为本人，尚无确认肖像。"
+  },
+  {
+    "artistSlug": "caspar-david-friedrich",
+    "nameZh": "卡斯帕·大卫·弗里德里希",
+    "nameOriginal": "Caspar David Friedrich",
+    "birthYear": 1774,
+    "deathYear": 1840,
+    "lifespan": "1774–1840",
+    "nationality": "德国",
+    "movement": "浪漫主义",
+    "description": "将背影置于山海与薄雾之间，让风景承载沉思。",
+    "biography": "弗里德里希出生于波罗的海沿岸的格赖夫斯瓦尔德，曾到哥本哈根学习，后来长期生活在德累斯顿。他从素描和褐色调作品发展到油画，把山海、树木、废墟与远望的人物组织成具有精神意味的风景。画中的背影往往不讲述具体故事，而让观众与人物一起面对自然。\n\n他在十九世纪初获得学院认可，晚年却逐渐失去关注，疾病也限制了创作。二十世纪的重新发现，使这些安静而辽阔的画面进入现代人的视野。他是德国浪漫主义的重要代表，将风景从外部景物的记录，转化为关于孤独、信仰、时间与人的位置的思考。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Caspar_David_Friedrich"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q104884"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/caspar-david-friedrich"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Caspar_David_Friedrich",
+    "portraitUrl": "portraits/caspar-david-friedrich-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "j-m-w-turner",
+    "nameZh": "约瑟夫·马洛德·威廉·透纳",
+    "nameOriginal": "J. M. W. Turner",
+    "birthYear": 1775,
+    "deathYear": 1851,
     "lifespan": "1775–1851",
-    "description": "让船、城市与远景融入光、雾和风暴。",
-    "sourceUrl": "https://www.wikidata.org/wiki/Q159758"
+    "nationality": "英国",
+    "movement": "浪漫主义",
+    "description": "让船、城市与远景，逐渐融入光、雾和风暴。",
+    "biography": "透纳出生于伦敦，少年时期进入皇家美术学院学习，很早便以水彩和风景画获得认可。他广泛旅行，记录建筑、山川与海岸，也不断与古典绘画传统对话。随着创作发展，明确的物体轮廓逐渐让位于光、雾、风暴和运动中的颜色。\n\n《战舰无畏号》《雨、蒸汽和速度》等作品，让历史记忆与工业时代的新景象同时进入风景。他晚期大胆而近乎抽象的画法，在当时也引起争议。作为英国浪漫主义的核心画家，透纳改变了绘画呈现大气与时间的方式，并为后来的印象派及现代艺术提供了重要启发。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/J._M._W._Turner"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q159758"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/joseph-mallord-william-turner"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/J._M._W._Turner",
+    "portraitUrl": "portraits/j-m-w-turner-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Turner_Self_Portrait.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
-    "artistSlug": "camille-pissarro",
-    "lifespan": "1830–1903",
-    "description": "让乡村劳动与城市街道，在光线和季节中缓缓展开。",
-    "sourceUrl": "https://www.clevelandart.org/art/2020.113"
+    "artistSlug": "edgar-degas",
+    "nameZh": "埃德加·德加",
+    "nameOriginal": "Edgar Degas",
+    "birthYear": 1834,
+    "deathYear": 1917,
+    "lifespan": "1834–1917",
+    "nationality": "法国",
+    "movement": "印象派",
+    "description": "从排练室与日常动作中，捕捉身体的节奏和距离。",
+    "biography": "德加出生于巴黎，接受严谨的素描训练，并赴意大利研究古典绘画。早期他希望成为历史画家，后来转向身边的现代生活，描绘舞者、赛马、洗浴与城市人物。他参与印象派展览，却更愿意称自己为现实主义者，也不像许多同伴那样主要依靠户外写生。\n\n画面中偏离中心的构图、突然截断的动作和舞台外的劳动，改变了观众观看人物的方式。油画之外，他大量使用粉彩，也研究雕塑和版画。晚年视力下降仍未完全停止创作。他把古典训练与新的观看角度结合起来，使现代生活中的身体、孤独与动作成为绘画的重要主题。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Edgar_Degas"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q46373"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/edgar-degas-1834-1917-painting-and-drawing"
+      },
+      {
+        "label": "克利夫兰美术馆 · 作者生平",
+        "url": "https://www.clevelandart.org/art/1946.83"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Edgar_Degas",
+    "portraitUrl": "portraits/edgar-degas-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Self-portrait_by_Edgar_Degas.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "edouard-manet",
+    "nameZh": "爱德华·马奈",
+    "nameOriginal": "Édouard Manet",
+    "birthYear": 1832,
+    "deathYear": 1883,
+    "lifespan": "1832–1883",
+    "nationality": "法国",
+    "movement": "现实主义",
+    "description": "以直接的目光和鲜明色块，描绘现代巴黎的生活。",
+    "biography": "马奈出生于巴黎一个富裕家庭，早年尝试海军道路，后来选择学习绘画。他研究委拉斯开兹等古代大师，却把人物放回十九世纪的城市生活。《草地上的午餐》和《奥林匹亚》因题材与画法引发争议，也挑战了学院绘画习惯的理想化处理。\n\n他与印象派画家来往密切，但仍重视官方沙龙，并未参加他们的独立展览。咖啡馆、剧院、街景和肖像中的人物，常以直接而难以解释的目光面对观众。他以鲜明色块和简化明暗连接现实主义与现代绘画，让看似熟悉的巴黎日常显露出新的视觉和社会张力。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/%C3%89douard_Manet"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q40599"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/edouard-manet-1832-1883"
+      },
+      {
+        "label": "克利夫兰美术馆 · 作者生平",
+        "url": "https://www.clevelandart.org/art/1956.718"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/%C3%89douard_Manet",
+    "portraitUrl": "portraits/edouard-manet-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Manet,_en_buste,_de_face_-_Nadar.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "paul-cezanne",
+    "nameZh": "保罗·塞尚",
+    "nameOriginal": "Paul Cézanne",
+    "birthYear": 1839,
+    "deathYear": 1906,
+    "lifespan": "1839–1906",
+    "nationality": "法国",
+    "movement": "后印象派",
+    "description": "用色块组织山岳与静物，重新寻找画面的重量。",
+    "biography": "塞尚出生于普罗旺斯的艾克斯，曾到巴黎尝试进入艺术界，并与左拉、毕沙罗等人交往。他参加早期印象派展览，在户外观察中逐渐摆脱厚重的早期画法，却没有满足于记录转瞬即逝的光线。此后，他反复研究静物、浴者与圣维克多山，探索颜色怎样建立体积和空间。\n\n苹果、桌面与远山在画中具有不稳定却严密的关系，视角也不总服从单一透视。长期独立工作的塞尚，晚年才得到更广泛的认可。他把自然观察转化为持续的形式研究，深刻影响了立体主义以及二十世纪绘画对结构、平面和观看方式的探索。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q35548"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/paul-cezanne"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne",
+    "portraitUrl": "portraits/paul-cezanne-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Paul-Cezanne.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "edvard-munch",
+    "nameZh": "爱德华·蒙克",
+    "nameOriginal": "Edvard Munch",
+    "birthYear": 1863,
+    "deathYear": 1944,
+    "lifespan": "1863–1944",
+    "nationality": "挪威",
+    "movement": "表现主义",
+    "description": "以流动线条和紧张色彩，描绘情绪深处的回声。",
+    "biography": "蒙克出生于挪威，童年的丧亲经历和家庭中的疾病，使生命、焦虑与死亡成为反复出现的主题。他在克里斯蒂安尼亚学习绘画，后来到法国和德国接触新的艺术观念，逐渐离开自然主义的细致描写，转向富于象征意味的线条与色彩。\n\n《呐喊》以及围绕爱、嫉妒、疾病展开的作品，共同构成他对现代心理经验的长期探索。他也以木刻和石版画反复改变同一主题，使画面在不同媒介中获得新的力量。晚年他继续在挪威创作。蒙克并不只是表现个人痛苦，而把难以言说的内在感受转化为现代艺术可以共享的视觉语言。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Edvard_Munch"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q41406"
+      },
+      {
+        "label": "博物馆 · 艺术家资料",
+        "url": "https://www.nasjonalmuseet.no/en/stories/explore-the-collection/edvard-munch-and-the-scream-in-the-national-museum/"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Edvard_Munch",
+    "portraitUrl": "portraits/edvard-munch-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_Self-Portrait_with_Cigarette_-_NG.M.00470_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "alfred-sisley",
-    "lifespan": "1840–1899",
+    "nameZh": "阿尔弗雷德·西斯莱",
+    "nameOriginal": "Alfred Sisley",
+    "birthYear": 1839,
+    "deathYear": 1899,
+    "lifespan": "1839–1899",
+    "nationality": "英国 · 主要活跃于法国",
+    "movement": "印象派",
     "description": "以河岸、桥梁与天空，记录近郊风景的清澈光色。",
-    "sourceUrl": "https://www.clevelandart.org/art/1961.262"
+    "biography": "西斯莱出生于巴黎，父母是英国人，长期在法国生活与创作。他在格莱尔画室结识莫奈和雷诺阿，并成为印象派的重要成员。与同伴相比，他几乎始终专注风景，反复描绘塞纳河流域的小镇、桥梁、河岸与冬日道路，细看天气如何改变熟悉的地方。\n\n家境在普法战争后转差，他此后常处于经济困难之中，生前也没有获得与后来声誉相称的认可。他的作品以清晰的空间、轻盈的笔触和大面积天空见长，不依靠奇观，而从普通郊区寻找光色的细微变化。这种持续而专注的观察，是印象派风景传统中不可缺少的一部分。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Alfred_Sisley"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q175130"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/alfred-sisley"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Alfred_Sisley",
+    "portraitUrl": "portraits/alfred-sisley-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Alfred_Sisley_photo_full.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "berthe-morisot",
+    "nameZh": "贝尔特·莫里索",
+    "nameOriginal": "Berthe Morisot",
+    "birthYear": 1841,
+    "deathYear": 1895,
     "lifespan": "1841–1895",
-    "description": "用轻盈笔触描绘窗边、花园与女性的日常片刻。",
-    "sourceUrl": "https://www.clevelandart.org/art/1950.89"
-  },
-  {
-    "artistSlug": "mary-cassatt",
-    "lifespan": "1844–1926",
-    "description": "将母子相处与女性生活，凝成亲密而平静的画面。",
-    "sourceUrl": "https://www.clevelandart.org/art/1920.379"
+    "nationality": "法国",
+    "movement": "印象派",
+    "description": "用轻盈笔触，描绘窗边、花园与女性的日常片刻。",
+    "biography": "莫里索出生于法国布尔日，早年与姐姐共同学习绘画，受到柯罗的户外写生方法启发。她先在官方沙龙展出，1874年转而参加首届印象派展览，此后长期活跃于这一群体。她与马奈家族关系密切，但始终形成自己的创作语言，不只是其他艺术家的模特或同伴。\n\n窗边、阳台、花园以及女性和儿童的生活，是她反复观察的题材。轻快而开放的笔触，让人物与环境在流动的光色中相连。作为十九世纪重要的女性艺术家，她将自己能够接近的生活空间变成现代绘画的实验场，使亲密经验获得超越私人生活的艺术意义。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Berthe_Morisot"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q105320"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/berthe-morisot"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Berthe_Morisot",
+    "portraitUrl": "portraits/berthe-morisot-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Morisot_berthe_photo.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "paul-gauguin",
+    "nameZh": "保罗·高更",
+    "nameOriginal": "Paul Gauguin",
+    "birthYear": 1848,
+    "deathYear": 1903,
     "lifespan": "1848–1903",
-    "description": "以平涂色块和象征性人物，构成遥远风景中的内心世界。",
-    "sourceUrl": "https://www.clevelandart.org/art/1978.63"
+    "nationality": "法国 · 活跃于法国及南太平洋",
+    "movement": "后印象派",
+    "description": "以平涂色块和象征性人物，构成内心的远方。",
+    "biography": "高更出生于巴黎，童年一度生活在秘鲁，成年后做过证券经纪人，后来转向职业绘画。他曾与印象派画家共同展出，又在布列塔尼和阿尔勒探索更概括的轮廓与平涂色块，希望超越对眼前光线的直接记录，将记忆、信仰与想象纳入画面。\n\n1891年起，他多次前往塔希提，晚年居于马克萨斯群岛。这些经历形成了鲜明的南太平洋题材，也涉及殖民时代的权力关系，不能仅当作无忧的异域风景。他以象征性构图影响了纳比派与现代艺术，但理解其作品，也需要同时注意画面背后的历史与被描绘者的处境。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Paul_Gauguin"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q37693"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/paul-gauguin"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Paul_Gauguin",
+    "portraitUrl": "portraits/paul-gauguin-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_1891.png",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "henri-de-toulouse-lautrec",
+    "nameZh": "亨利·德·图卢兹-洛特雷克",
+    "nameOriginal": "Henri de Toulouse-Lautrec",
+    "birthYear": 1864,
+    "deathYear": 1901,
+    "lifespan": "1864–1901",
+    "nationality": "法国",
+    "movement": "后印象派",
+    "description": "以敏锐线条，记录舞台光亮与巴黎夜生活的距离。",
+    "biography": "图卢兹-洛特雷克出生于法国贵族家庭，少年时两次腿部骨折影响了身体发育。学习绘画后，他长期生活在巴黎蒙马特，关注舞厅、剧院、咖啡馆和演员的日常。他并不只描绘表演的热闹，也观察疲惫、等待与舞台之外的人际关系。\n\n油画、素描和石版海报之间，鲜明轮廓、大片平色与大胆裁切形成一致的语言，日本版画也提供了重要启发。他为红磨坊等场所制作的海报，将现代视觉艺术带到城市街道。短暂的生涯留下了对美好年代巴黎的复杂记录，并对平面设计与现代人物绘画产生持久影响。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q82445"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/henri-de-toulouse-lautrec"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec",
+    "portraitUrl": "portraits/henri-de-toulouse-lautrec-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Photolautrec.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "john-constable",
+    "nameZh": "约翰·康斯特布尔",
+    "nameOriginal": "John Constable",
+    "birthYear": 1776,
+    "deathYear": 1837,
     "lifespan": "1776–1837",
+    "nationality": "英国",
+    "movement": "浪漫主义",
     "description": "在田野与云层之间，细看英国乡村的天气和光。",
-    "sourceUrl": "https://www.clevelandart.org/art/1972.48"
+    "biography": "康斯特布尔出生于英国萨福克，家乡的河流、磨坊与田野成为一生反复描绘的地方。他在皇家美术学院学习，却更相信对自然的直接观察，以油画习作研究云层、树木和光线，再将这些记录转化为大型风景画。《干草车》呈现的正是他熟悉的乡村世界。\n\n他的作品在法国较早受到欢迎，并影响了巴比松画派；在英国的正式认可来得更晚。他没有把风景处理成遥远的理想舞台，而在具体天气和劳动痕迹中表达情感。作为英国浪漫主义的重要画家，他为十九世纪风景画注入了观察的真实性和对地方生活的深厚依恋。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/John_Constable"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q159297"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/john-constable"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/John_Constable",
+    "portraitUrl": "portraits/john-constable-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:John_Constable_by_Ramsay_Richard_Reinagle.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "thomas-cole",
+    "nameZh": "托马斯·科尔",
+    "nameOriginal": "Thomas Cole",
+    "birthYear": 1801,
+    "deathYear": 1848,
+    "lifespan": "1801–1848",
+    "nationality": "美国 · 出生于英国",
+    "movement": "哈德逊河画派",
+    "description": "以辽阔山川与微小人物，思考自然和文明的关系。",
+    "biography": "托马斯·科尔出生于英国，青年时期随家人移居美国。工业化环境的记忆与北美山川的经验，使他对自然和文明的关系格外敏感。他在纽约州旅行写生，以哈德逊河流域的风景获得关注，后来也到欧洲研究古典与浪漫主义绘画。\n\n在他的画中，森林、山脉与河谷既是具体地点，也常承载历史和道德寓意。《帝国历程》等系列讨论文明的兴衰，安静风景里则可见开发留下的痕迹。作为哈德逊河画派的奠基人物，他推动美国风景画形成独立传统，同时也留下对工业化和扩张所带来变化的警觉。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Thomas_Cole"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q334001"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/thomas-cole-1801-1848"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Thomas_Cole",
+    "portraitUrl": "portraits/thomas-cole-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Cole_1845_(cropped).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "frederic-edwin-church",
+    "nameZh": "弗雷德里克·埃德温·丘奇",
+    "nameOriginal": "Frederic Edwin Church",
+    "birthYear": 1826,
+    "deathYear": 1900,
     "lifespan": "1826–1900",
+    "nationality": "美国",
+    "movement": "哈德逊河画派",
     "description": "让壮阔山川与细密观察，在光线变化中相遇。",
-    "sourceUrl": "https://www.clevelandart.org/art/1965.233"
+    "biography": "丘奇出生于美国康涅狄格州，年轻时师从托马斯·科尔，成为哈德逊河画派的重要成员。他广泛旅行，从南美安第斯山脉到北方冰山，再到地中海与近东地区，以大量写生和细节研究积累素材，并在工作室中组织成宏大的风景。\n\n他的画面兼具精密观察、戏剧性光线和开阔视野，单幅巨作也曾以收费展览吸引观众。不过，山川在画中并不只是壮观景色，而关联十九世纪对科学、宗教与世界地理的想象。他将自然观察和全景式构图结合，成为美国风景画从地方景象走向世界视野的重要人物。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Frederic_Edwin_Church"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q366212"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/frederic-edwin-church-1826-1900"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Frederic_Edwin_Church",
+    "portraitUrl": "portraits/frederic-edwin-church-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Photograph_of_Frederic_Edwin_Church_by_Napoleon_Sarony.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "albert-bierstadt",
+    "nameZh": "阿尔伯特·比尔施塔特",
+    "nameOriginal": "Albert Bierstadt",
+    "birthYear": 1830,
+    "deathYear": 1902,
     "lifespan": "1830–1902",
-    "description": "描绘山谷、巨峰与远方的光，展现北美自然的尺度。",
-    "sourceUrl": "https://www.clevelandart.org/art/1922.684"
+    "nationality": "美国 · 出生于德国",
+    "movement": "哈德逊河画派",
+    "description": "以山谷、巨峰与远方的光，展现北美自然的尺度。",
+    "biography": "比尔施塔特出生于德国，幼年随家人移居美国，后来返回杜塞尔多夫学习绘画。他参加美国西部的考察旅行，以素描、油画习作和摄影记录山脉与河谷，再在工作室中构成辽阔而富于戏剧性的风景。落基山、内华达山脉和优胜美地成为重要题材。\n\n这些画作以巨大的尺度、清晰细节和穿透云层的光线获得成功，也塑造了当时公众对于西部的想象。它们同时置身于扩张时代的历史之中，观看时不能忽略当地居民和土地的实际处境。作为美国十九世纪重要风景画家，他使自然的宏伟成为绘画中心，也留下值得重新审视的时代视角。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Albert_Bierstadt"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q77132"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/the-hudson-river-school"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Albert_Bierstadt",
+    "portraitUrl": "portraits/albert-bierstadt-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Original_Colour_Photo_of_Albert_Bierstadt,_c._1895.png",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "frans-hals",
+    "nameZh": "弗兰斯·哈尔斯",
+    "nameOriginal": "Frans Hals",
+    "birthYear": 1582,
+    "deathYear": 1666,
+    "lifespan": "约1582–1666",
+    "nationality": "荷兰 · 出生于安特卫普",
+    "movement": "荷兰黄金时代",
+    "description": "用松动而准确的笔触，捕捉面孔上转瞬即逝的神情。",
+    "biography": "哈尔斯出生于安特卫普，主要在荷兰哈勒姆生活和工作。他为市民、夫妇、民兵组织与慈善机构绘制肖像，也描绘身份不明却个性鲜明的人物。与整齐细致的同时代肖像相比，他的画法显得格外自由：衣领、手势与笑意，常在迅速而准确的笔触中形成。\n\n这种看似随意的效果建立在对人物的敏锐观察上，既记录社会身份，也保留鲜活的性格。晚期作品色调趋于节制，笔触却更加概括。他是荷兰黄金时代重要的肖像画家，十九世纪的现实主义与印象派画家重新欣赏他的技法，使其作品成为现代人物画的重要参照。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Frans_Hals"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q167654"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/frans-hals"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Frans_Hals",
+    "portraitUrl": "portraits/frans-hals-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:After_Frans_Hals_-_Portrait_of_Frans_Hals_-_Indianapolis.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "pieter-de-hooch",
+    "nameZh": "彼得·德·霍赫",
+    "nameOriginal": "Pieter de Hooch",
+    "birthYear": 1629,
+    "deathYear": null,
+    "lifespan": "1629–卒年不详",
+    "nationality": "荷兰",
+    "movement": "荷兰黄金时代",
+    "description": "让门廊、庭院与窗光，连接安静的家庭生活。",
+    "biography": "德·霍赫出生于鹿特丹，十七世纪中叶在代尔夫特工作，后来移居阿姆斯特丹。他以庭院、门廊与家庭室内闻名，常安排人物在多个相通的房间中活动，让光线沿着门洞进入空间。妇女、儿童和日常劳动不是宏大故事的配角，而是画面的中心。\n\n他与维米尔同属荷兰黄金时代的室内画传统，但更强调空间的连通和家庭生活的秩序。移居阿姆斯特丹后，题材转向较富裕的室内，色调也更加浓厚。他的卒年尚未确定，过去常被误引的1684年与其同名儿子有关；这里保留这一不确定性，而不将推测写成确切生平。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Pieter_de_Hooch"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q314889"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/pieter-de-hooch"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Pieter_de_Hooch",
+    "portraitUrl": "",
+    "portraitSourceUrl": "",
+    "portraitRights": "",
+    "portraitCaption": "",
+    "portraitMissingReason": "常用自画像的身份存在争议，暂不采用。"
   },
   {
     "artistSlug": "jacob-van-ruisdael",
-    "lifespan": "1628–1682",
-    "description": "在云影、树林与急流中，呈现风景的力量与宁静。",
-    "sourceUrl": "https://www.clevelandart.org/art/1967.19"
+    "nameZh": "雅各布·范·雷斯达尔",
+    "nameOriginal": "Jacob van Ruisdael",
+    "birthYear": 1629,
+    "deathYear": 1682,
+    "lifespan": "约1629–1682",
+    "nationality": "荷兰",
+    "movement": "荷兰黄金时代",
+    "description": "以广阔天空与深厚树影，让风景呈现自然的力量。",
+    "biography": "鲁伊斯达尔出生于哈勒姆，后来在阿姆斯特丹工作，是荷兰黄金时代最重要的风景画家之一。他的题材从树林、沙丘与河流，扩展到城市全景、海景和瀑布。天空常占据画面的大片区域，云层与光线使平坦土地也具有深度和力量。\n\n他曾到德国旅行，而一些北方瀑布题材并不能直接视为亲历地点的写生。画面既来自观察，也经过精心组织，以树木、建筑和水流建立自然的秩序。霍贝玛是他有记录的学生。他对风景结构与气氛的处理影响了后来的欧洲风景画；由于尚无可靠本人肖像，本馆不以风景作品代替其头像。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Jacob_van_Ruisdael"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q213612"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/jacob-van-ruisdael"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jacob_van_Ruisdael",
+    "portraitUrl": "",
+    "portraitSourceUrl": "",
+    "portraitRights": "",
+    "portraitCaption": "",
+    "portraitMissingReason": "尚未确认可靠本人肖像，不以风景画代替。"
   },
   {
-    "artistSlug": "meindert-hobbema",
-    "lifespan": "1638–1709",
-    "description": "林荫道、水磨与乡间小路，通向安静的荷兰风景。",
-    "sourceUrl": "https://api.artic.edu/api/v1/artworks/869"
+    "artistSlug": "jan-steen",
+    "nameZh": "扬·斯滕",
+    "nameOriginal": "Jan Steen",
+    "birthYear": 1626,
+    "deathYear": 1679,
+    "lifespan": "约1626–1679",
+    "nationality": "荷兰",
+    "movement": "荷兰黄金时代",
+    "description": "以热闹的家庭场景，让幽默与日常教训相遇。",
+    "biography": "扬·斯蒂恩出生于莱顿，在荷兰多个城市生活和工作。他擅长描绘家庭聚会、节庆、酒馆与日常生活，以人物的动作、表情和彼此关系组成富有戏剧性的场景。看似杂乱的房间里，细节常暗示当时熟悉的谚语、道德观念与社会习惯。\n\n他并不只是记录热闹，而让观众在欢乐与失序之间发现含蓄的讽刺。人物可以滑稽，也保留人性的温度；画面的布局和色彩则十分讲究。作为荷兰黄金时代的重要风俗画家，他把讲故事的能力、心理观察和日常幽默结合起来，使普通市民生活获得复杂而持久的艺术表达。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Jan_Steen"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q205863"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/jan-steen"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jan_Steen",
+    "portraitUrl": "portraits/jan-steen-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Jan_Steen_010.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "caravaggio",
+    "nameZh": "卡拉瓦乔",
+    "nameOriginal": "Caravaggio",
+    "birthYear": 1571,
+    "deathYear": 1610,
+    "lifespan": "1571–1610",
+    "nationality": "意大利",
+    "movement": "巴洛克",
+    "description": "让强烈光线照见身体，将神圣故事带回真实世界。",
+    "biography": "卡拉瓦乔出生于伦巴第地区，在米兰接受训练，后来到罗马工作。他以现实中的人物作模特，将粗糙的皮肤、劳动者的身体和强烈的光线带入宗教绘画。深暗背景中的突然照明，不只制造戏剧效果，也把情节集中在一个动作或一次相遇上。\n\n他的生活充满冲突，1606年在罗马杀人后逃亡，随后辗转那不勒斯、马耳他与西西里继续创作。作品中的紧张感与其经历可以对照，却不能简单等同。作为巴洛克绘画的重要革新者，他使神圣叙事具有直接的身体真实，并通过众多追随者改变了欧洲绘画对光线与人物的处理。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Caravaggio"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q42207"
+      },
+      {
+        "label": "博物馆 · 艺术家资料",
+        "url": "https://www.nationalgallery.org.uk/artists/michelangelo-merisi-da-caravaggio"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Caravaggio",
+    "portraitUrl": "portraits/caravaggio-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Bild-Ottavio_Leoni,_Caravaggio.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "diego-velazquez",
+    "nameZh": "迭戈·委拉斯开兹",
+    "nameOriginal": "Diego Velázquez",
+    "birthYear": 1599,
+    "deathYear": 1660,
+    "lifespan": "1599–1660",
+    "nationality": "西班牙",
+    "movement": "巴洛克",
+    "description": "以自然笔触与深邃目光，描绘宫廷和人的尊严。",
+    "biography": "委拉斯开兹出生于塞维利亚，早年以厨房场景和人物画练习对现实的观察，后来成为西班牙国王腓力四世的宫廷画家。他画王室、侍从和普通人物，也两度到意大利研究艺术。长期的宫廷工作，使他持续思考肖像、身份与观看者之间的关系。\n\n从早期明确的明暗到晚期松动的笔触，他以极经济的画法表现光、织物与空间。《宫娥》把画家、王室和观众安排在难以一眼解释的结构中。他是西班牙黄金时代的重要人物，作品后来深刻影响马奈等现代画家，使肖像超越身份记录，成为关于真实与观看的复杂探索。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Diego_Vel%C3%A1zquez"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q297"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/diego-velazquez"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Diego_Vel%C3%A1zquez",
+    "portraitUrl": "portraits/diego-velazquez-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "peter-paul-rubens",
+    "nameZh": "彼得·保罗·鲁本斯",
+    "nameOriginal": "Peter Paul Rubens",
+    "birthYear": 1577,
+    "deathYear": 1640,
     "lifespan": "1577–1640",
-    "description": "以流动构图与饱满色彩，描绘人物、神话和历史。",
-    "sourceUrl": "https://www.clevelandart.org/art/1947.207"
+    "nationality": "佛兰德斯 · 主要活跃于安特卫普",
+    "movement": "巴洛克",
+    "description": "以丰厚色彩与流动身体，让历史充满运动和力量。",
+    "biography": "鲁本斯出生于今天的德国，成长于安特卫普，曾在意大利研究古代雕塑与文艺复兴绘画。回到佛兰德斯后，他经营大型画室，为教会、宫廷和私人收藏家制作祭坛画、神话、肖像与风景。他也承担外交任务，在欧洲不同宫廷之间往来。\n\n饱满的身体、旋转的构图和富有温度的色彩，使他的作品具有强烈的运动感。大型委托常由画室协作完成，需要结合具体作品辨认参与者，而不能把所有细节都视为本人独绘。他是佛兰德斯巴洛克的核心艺术家，将学识、外交经验与绘画创造连接起来，影响了后来的浪漫主义与人物画。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5599"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/peter-paul-rubens"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+    "portraitUrl": "portraits/peter-paul-rubens-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_(after_restoration).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "jean-francois-millet",
+    "nameZh": "让-弗朗索瓦·米勒",
+    "nameOriginal": "Jean-François Millet",
+    "birthYear": 1814,
+    "deathYear": 1875,
     "lifespan": "1814–1875",
-    "description": "让农人的劳动与停顿，成为乡野中朴素的主角。",
-    "sourceUrl": "https://www.clevelandart.org/art/1972.19"
+    "nationality": "法国",
+    "movement": "现实主义",
+    "description": "让田间劳动和暮色，留下普通生活的重量。",
+    "biography": "米勒出生于诺曼底的农民家庭，后来到巴黎学习绘画，1849年定居巴比松。乡村劳动成为他长期的题材：播种、拾穗、照料孩子和傍晚祈祷。这些人物并不以个别身份引人注意，而通过弯腰、负重和重复动作，表现日常劳动的持续与尊严。\n\n《拾穗者》和《晚钟》在不同年代被赋予不同的社会和宗教解释。他的画面既有关切贫困者的现实观察，也保留沉静、概括的形式力量。晚年他更加关注纯粹风景。作为现实主义与巴比松传统的重要画家，米勒让农民生活成为严肃艺术的中心，并深刻影响了梵高等后来的艺术家。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Millet"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q148458"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/jean-francois-millet"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Millet",
+    "portraitUrl": "portraits/jean-francois-millet-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_by_Nadar,_Metropolitan_Museum_copy.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "gustave-courbet",
+    "nameZh": "古斯塔夫·库尔贝",
+    "nameOriginal": "Gustave Courbet",
+    "birthYear": 1819,
+    "deathYear": 1877,
+    "lifespan": "1819–1877",
+    "nationality": "法国 · 晚年居于瑞士",
+    "movement": "现实主义",
+    "description": "以厚重颜料和真实人物，把日常带入宏大的画面。",
+    "biography": "库尔贝出生于法国奥尔南，后来到巴黎发展。他拒绝只为古典神话和历史英雄保留大型画面的惯例，以现实中的农民、劳动者和家乡人物作为主角。《奥尔南的葬礼》等作品因此引起争议，也推动现实主义成为十九世纪的重要艺术立场。\n\n他强调对可见世界的观察，使用厚重颜料和有力的明暗，也画海浪、山崖、静物与人体。巴黎公社之后，他因政治事件被监禁，晚年移居瑞士。独立的展览实践和对社会现实的直接回应，使库尔贝改变了画家的公共角色，也为印象派及后来的现代艺术提供了重要的自主性范例。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Gustave_Courbet"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q34618"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/gustave-courbet"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Gustave_Courbet",
+    "portraitUrl": "portraits/gustave-courbet-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet,_photograph_Atelier_Nadar,_c._1860s.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "winslow-homer",
+    "nameZh": "温斯洛·霍默",
+    "nameOriginal": "Winslow Homer",
+    "birthYear": 1836,
+    "deathYear": 1910,
     "lifespan": "1836–1910",
-    "description": "在海浪、船只与日常劳动之间，注视人与自然的关系。",
-    "sourceUrl": "https://www.clevelandart.org/art/1924.195"
+    "nationality": "美国",
+    "movement": "现实主义",
+    "description": "以海浪、劳动与坚实人物，描绘人与自然的相遇。",
+    "biography": "霍默出生于波士顿，早年从事商业插图，曾作为报刊画家记录美国南北战争。他主要依靠自学转向油画，战后描绘儿童、乡村生活与劳动者，随后也以水彩记录旅行所见。赴英国海岸生活的经历，使海与渔民在他的作品中获得更重要的位置。\n\n晚年他定居缅因州海岸，反复观察波浪、岩石和恶劣天气。海景不只是远方的美景，而是人必须面对的力量；人物的动作因而显得坚实而节制。他在油画与水彩之间形成不同却相通的表达，成为十九世纪美国绘画的重要人物，使日常生活与自然环境具有深厚的现实感。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Winslow_Homer"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q344838"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/winslow-homer-1836-1910"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Winslow_Homer",
+    "portraitUrl": "portraits/winslow-homer-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_by_Sarony.jpeg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "thomas-eakins",
+    "nameZh": "托马斯·伊肯斯",
+    "nameOriginal": "Thomas Eakins",
+    "birthYear": 1844,
+    "deathYear": 1916,
+    "lifespan": "1844–1916",
+    "nationality": "美国",
+    "movement": "现实主义",
+    "description": "以准确观察和沉稳构图，注视身体与城市生活。",
+    "biography": "伊金斯出生于费城，曾在巴黎学习绘画，并研究解剖和古代大师的作品。回到家乡后，他以赛艇、医学课堂和熟悉的人物为题材，努力让绘画建立在真实观察之上。《格罗斯诊所》等作品把现代职业生活和身体知识带入大型人物画。\n\n他也使用摄影研究运动，并在艺术教学中强调解剖与人体写生，这些方法曾引起制度冲突。肖像中的人物常不加美化，保留思考、疲倦与个性。作为美国现实主义的重要画家，伊金斯把艺术、科学和城市经验连接起来，使人的身体与精神成为值得认真、持续观察的对象。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Thomas_Eakins"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q214905"
+      },
+      {
+        "label": "博物馆 · 艺术家资料",
+        "url": "https://www.metmuseum.org/essays/thomas-eakins-1844-1916-painting"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Thomas_Eakins",
+    "portraitUrl": "portraits/thomas-eakins-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Eakins_selfportrait.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "odilon-redon",
+    "nameZh": "奥迪隆·雷东",
+    "nameOriginal": "Odilon Redon",
+    "birthYear": 1840,
+    "deathYear": 1916,
     "lifespan": "1840–1916",
-    "description": "以花卉、梦境与奇异面孔，打开现实之外的想象。",
-    "sourceUrl": "https://www.clevelandart.org/art/1988.91"
+    "nationality": "法国",
+    "movement": "象征主义",
+    "description": "让花朵与奇异形象，浮现于梦境般的色彩之中。",
+    "biography": "雷东出生于波尔多，早年在素描、炭笔和石版画中构成被称为“黑色作品”的世界：眼睛、漂浮的头颅和难以解释的生物，介于观察与梦境之间。他的艺术受到文学与象征主义环境的推动，不以说明故事为目的，而让形象保留开放的联想。\n\n十九世纪九十年代起，他更多使用粉彩和油画，色彩逐渐占据中心。花卉、人物与神话题材在柔和却鲜明的光色中相遇，既不像直接写生，也不完全脱离现实。他是法国象征主义的重要艺术家，将内在经验转化为独特的视觉世界，并为后来的超现实主义与现代色彩探索提供了启发。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Odilon_Redon"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q154349"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/odilon-redon"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Odilon_Redon",
+    "portraitUrl": "portraits/odilon-redon-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Odilon_Redon_vers_1880.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "arnold-bocklin",
+    "nameZh": "阿诺德·勃克林",
+    "nameOriginal": "Arnold Böcklin",
+    "birthYear": 1827,
+    "deathYear": 1901,
     "lifespan": "1827–1901",
-    "description": "让海岸、废墟与神话，构成静默而神秘的世界。",
-    "sourceUrl": "https://www.clevelandart.org/art/1979.57"
+    "nationality": "瑞士 · 长期活跃于意大利",
+    "movement": "象征主义",
+    "description": "以静止岛屿和神话形象，让风景承载神秘的时间。",
+    "biography": "勃克林出生于巴塞尔，在杜塞尔多夫学习绘画，后来多次居住于意大利。古典遗迹、地中海风景与神话传统，为他的创作提供了重要环境。他将海岸、树林和建筑与半人半兽的形象并置，使熟悉的自然景物进入难以解释的象征世界。\n\n《死之岛》有多个版本，岛屿、船只与肃静建筑之间的关系，激发了许多文学家和音乐家的想象。他并不依靠清楚的寓意来封闭画面，而让生命、死亡与时间保持悬而未决的气氛。作为象征主义的重要代表，勃克林影响了二十世纪的超现实主义，也使风景成为表达内在经验的空间。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Arnold_B%C3%B6cklin"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q123071"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/arnold-bocklin"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Arnold_B%C3%B6cklin",
+    "portraitUrl": "portraits/arnold-bocklin-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_(1827_-_1901),_Selbstportrait_(1873).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "egon-schiele",
+    "nameZh": "埃贡·席勒",
+    "nameOriginal": "Egon Schiele",
+    "birthYear": 1890,
+    "deathYear": 1918,
+    "lifespan": "1890–1918",
+    "nationality": "奥地利",
+    "movement": "表现主义",
+    "description": "以紧绷线条与扭转姿态，直面身体和自我。",
+    "biography": "席勒出生于奥地利，年轻时进入维也纳美术学院，后来离开学院并组织新的艺术团体。克里姆特对他给予支持，但他逐渐发展出更尖锐的个人语言：扭转的身体、突出的骨骼、空白背景和紧绷的轮廓，使肖像具有不安而直接的力量。\n\n自画像、人物与城市景观共同构成他短暂的创作生涯。他的生活和人体题材曾引发社会争议，第一次世界大战又改变了创作环境。1918年，他与妻子先后死于流感。作为奥地利表现主义的重要画家，席勒使身体不仅是被观看的对象，也成为表达脆弱、欲望与自我意识的核心语言。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Egon_Schiele"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q44032"
+      },
+      {
+        "label": "博物馆 · 艺术家资料",
+        "url": "https://www.leopoldmuseum.org/en/collection/egon-schiele"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Egon_Schiele",
+    "portraitUrl": "portraits/egon-schiele-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Egon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "john-singer-sargent",
+    "nameZh": "约翰·辛格·萨金特",
+    "nameOriginal": "John Singer Sargent",
+    "birthYear": 1856,
+    "deathYear": 1925,
     "lifespan": "1856–1925",
-    "description": "用敏捷笔触与光色，捕捉面孔、衣饰和人物神态。",
-    "sourceUrl": "https://www.clevelandart.org/art/1998.168"
-  },
-  {
-    "artistSlug": "james-mcneill-whistler",
-    "lifespan": "1834–1903",
-    "description": "以柔和色调和简练构图，让肖像与夜色如音乐般安静。",
-    "sourceUrl": "https://www.clevelandart.org/art/1942.1133"
+    "nationality": "美国 · 主要活跃于欧洲",
+    "movement": "现实主义",
+    "description": "以流畅笔触与敏锐目光，描绘人物和旅行中的光。",
+    "biography": "萨金特出生于佛罗伦萨，父母是美国人，他在欧洲长大并于巴黎接受绘画训练。早年《X夫人》的展出引起争议，之后他在伦敦建立成功的肖像事业，为美好年代和爱德华时代的上层社会留下大量形象。他也持续旅行，描绘威尼斯、山地与日常人物。\n\n迅速而准确的笔触，使织物、姿态和人物神情在少量色块中成立。职业后期，他减少正式肖像委托，更投入水彩、风景与壁画。萨金特的作品既保存社交生活的外观，也显示高度敏锐的观察能力；在古典技巧与现代笔触之间，他形成了极具辨识度的人物画语言。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/John_Singer_Sargent"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q155626"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/john-singer-sargent"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/John_Singer_Sargent",
+    "portraitUrl": "portraits/john-singer-sargent-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_1903.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "katsushika-hokusai",
+    "nameZh": "葛饰北斋",
+    "nameOriginal": "Katsushika Hokusai",
+    "birthYear": 1760,
+    "deathYear": 1849,
     "lifespan": "1760–1849",
-    "description": "以木版的线条和色面，描绘海浪、富士山与自然细节。",
-    "sourceUrl": "https://www.clevelandart.org/art/1930.189"
+    "nationality": "日本",
+    "movement": "浮世绘",
+    "description": "以大胆轮廓和变化视角，连接巨浪、远山与日常。",
+    "biography": "葛饰北斋出生于江户，活跃于日本江户时代。他从浮世绘画室学习起步，一生不断改变署名和创作方向，作品涵盖版画、绘本、人物与风景。《富岳三十六景》从不同地点和天气观察富士山，《神奈川冲浪里》则让近处巨浪与远方山峰构成强烈的尺度关系。\n\n他长期研究自然、动物和人的动作，把浮世绘从演员与都市人物拓展到更广阔的世界。晚年仍持续绘画，留下对学习与观看的强烈热情。十九世纪传入欧洲后，他大胆的构图、平面色彩和不寻常视角影响了莫奈、梵高等艺术家，也使日本版画成为现代视觉语言的重要来源。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Hokusai"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5586"
+      },
+      {
+        "label": "芝加哥艺术博物馆 · 艺术家档案",
+        "url": "https://www.artic.edu/artists/31492/katsushika-hokusai"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hokusai",
+    "portraitUrl": "portraits/katsushika-hokusai-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Hokusai_as_an_old_man.jpg",
+    "portraitRights": "CC0",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "utagawa-hiroshige",
+    "nameZh": "歌川广重",
+    "nameOriginal": "Utagawa Hiroshige",
+    "birthYear": 1797,
+    "deathYear": 1858,
     "lifespan": "1797–1858",
-    "description": "从雨、雪与薄雾中，发现旅途和城市的诗意。",
-    "sourceUrl": "https://www.clevelandart.org/art/1921.318"
+    "nationality": "日本",
+    "movement": "浮世绘",
+    "description": "以雨雪、桥梁与暮色，描绘旅途中安静的风景。",
+    "biography": "歌川广重出生于江户，曾承担家族的消防职务，后来进入歌川派学习版画。他以《东海道五十三次》和《名所江户百景》闻名，描绘道路、桥梁、旅人和城市边缘的景象。与北斋更有力的形体相比，他常让雨、雪、雾和黄昏成为画面的主角。\n\n木版渐变、前景的大幅裁切与远近关系，使普通地点具有细腻而诗性的气氛。他的风景回应江户时代旅行和名所文化的兴盛，也记录人们如何在天气与季节中感受地方。作品传入欧洲后影响了印象派和后印象派，使日常风景中的瞬间成为跨越地域的视觉经验。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Hiroshige"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q200798"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/art-of-the-pleasure-quarters-and-the-ukiyo-e-style"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hiroshige",
+    "portraitUrl": "portraits/utagawa-hiroshige-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Memorial_Portrait_of_Utagawa_Hiroshige_(5765350019).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "纪念肖像，1858年，歌川国贞作",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "kitagawa-utamaro",
+    "nameZh": "喜多川歌麿",
+    "nameOriginal": "Kitagawa Utamaro",
+    "birthYear": 1753,
+    "deathYear": 1806,
+    "lifespan": "约1753–1806",
+    "nationality": "日本",
+    "movement": "浮世绘",
+    "description": "以细长轮廓和近距离视角，观察女性的日常神情。",
+    "biography": "喜多川歌麿活跃于十八世纪末的江户，是浮世绘美人画的重要艺术家。他的早年生平仍有许多不确定之处，成熟作品则以近距离的女性肖像和日常活动见长。大首绘强调脸部、手势与衣饰，让相近的形象呈现细微不同的性格和情绪。\n\n他与出版商合作制作版画，也创作昆虫等自然题材的绘本。1804年，因涉及丰臣秀吉题材的出版物受到处罚，晚年创作受到影响。他通过细腻的线条、精心的印刷与人物观察，拓展了浮世绘的人物表达；作品后来在欧洲受到欢迎，并参与了日本艺术影响现代绘画的过程。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Utamaro"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q272045"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/art-of-the-pleasure-quarters-and-the-ukiyo-e-style"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Utamaro",
+    "portraitUrl": "portraits/kitagawa-utamaro-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Kitagawa_Utamaro_portrait_(cropped).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史纪念肖像，1815年，传鸟文斋荣之作",
+    "portraitMissingReason": ""
   },
   {
     "artistSlug": "jean-honore-fragonard",
+    "nameZh": "让-奥诺雷·弗拉戈纳尔",
+    "nameOriginal": "Jean-Honoré Fragonard",
+    "birthYear": 1732,
+    "deathYear": 1806,
     "lifespan": "1732–1806",
-    "description": "以轻快笔触描绘人物与花园，留下亲昵和想象的瞬间。",
-    "sourceUrl": "https://www.clevelandart.org/art/1942.49"
+    "nationality": "法国",
+    "movement": "洛可可",
+    "description": "以轻快笔触和私密场景，留住人物相处的温度。",
+    "biography": "弗拉戈纳尔出生于法国格拉斯，年轻时到巴黎学习，并赴罗马研究绘画。他在十八世纪洛可可艺术环境中发展出轻快而富于变化的笔触，描绘花园、阅读、游戏和亲密的人物关系。《秋千》等作品以愉悦的表面和含蓄的暗示，回应当时私人收藏家的趣味。\n\n他不只创作装饰性的场景，也画富有个性的肖像和家庭生活。快速的笔触、流动的衣饰与柔和光线，使人物仿佛处在尚未结束的瞬间。法国大革命后，社会环境与艺术趣味改变，他逐渐远离中心。今天这些作品仍展现洛可可人物画如何将技巧、感官经验与细致观察结合起来。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q127171"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/jean-honore-fragonard"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard",
+    "portraitUrl": "portraits/jean-honore-fragonard-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "theodore-gericault",
+    "nameZh": "泰奥多尔·席里柯",
+    "nameOriginal": "Théodore Géricault",
+    "birthYear": 1791,
+    "deathYear": 1824,
+    "lifespan": "1791–1824",
+    "nationality": "法国",
+    "movement": "浪漫主义",
+    "description": "以强烈形体与真实苦难，让历史画直面时代。",
+    "biography": "席里柯出生于鲁昂，在巴黎学习绘画，并到意大利研究古代大师。他关注马匹、军人和剧烈运动中的身体，又把目光转向当代事件。《梅杜萨之筏》根据真实海难创作，通过大量准备研究，将幸存者的绝望与希望组织成具有历史画规模的场景。\n\n他在英国接触赛马与社会生活，也描绘处境边缘的人物。作品中强健的形体并不总意味着英雄主义，常与脆弱、失控和苦难相伴。三十二岁去世使其生涯格外短暂，但他已经改变历史画可以面对的现实，成为法国浪漫主义的重要先驱，并为现代艺术关注人的处境留下强烈范例。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Th%C3%A9odore_G%C3%A9ricault"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q184212"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/romanticism"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Th%C3%A9odore_G%C3%A9ricault",
+    "portraitUrl": "portraits/theodore-gericault-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Horace_Vernet,_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault,_probably_1822_or_1823,_1998.84,_MET.jpg",
+    "portraitRights": "CC0",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "mary-cassatt",
+    "nameZh": "玛丽·卡萨特",
+    "nameOriginal": "Mary Cassatt",
+    "birthYear": 1844,
+    "deathYear": 1926,
+    "lifespan": "1844–1926",
+    "nationality": "美国 · 主要活跃于法国",
+    "movement": "印象派",
+    "description": "以清晰线条和亲密视角，描绘女性与儿童的相处。",
+    "biography": "卡萨特出生于美国宾夕法尼亚州，早年接受艺术训练，后来长期居住在法国。她与德加交往并参加印象派展览，关注女性阅读、观看演出和照料孩子的日常。母子题材并非只是温柔的象征，也包含姿态、视线和相处距离的细致观察。\n\n日本版画对她的构图和平面处理产生重要影响，她在油画、粉彩和版画中不断探索清晰线条与色面的关系。她也帮助美国收藏家认识印象派，影响作品进入公共馆藏的过程。作为重要的女性艺术家，卡萨特把亲密生活转化为现代绘画的主题，同时在跨大西洋的艺术交流中发挥关键作用。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Mary_Cassatt"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q173223"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/mary-stevenson-cassatt-1844-1926"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Mary_Cassatt",
+    "portraitUrl": "portraits/mary-cassatt-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Mary_Cassatt_photograph_1913.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "camille-pissarro",
+    "nameZh": "卡米耶·毕沙罗",
+    "nameOriginal": "Camille Pissarro",
+    "birthYear": 1830,
+    "deathYear": 1903,
+    "lifespan": "1830–1903",
+    "nationality": "法国 · 出生于圣托马斯岛",
+    "movement": "印象派",
+    "description": "让乡村劳动与城市街道，在季节和光线中展开。",
+    "biography": "毕沙罗出生于当时属丹麦的圣托马斯岛，后来到巴黎发展，成为印象派的重要组织者。他在乡村生活与户外写生中关注农民、道路和果园，也描绘巴黎与鲁昂的街道。他参加全部八届印象派展览，与不同年龄的画家保持交流，对塞尚等人给予重要支持。\n\n十九世纪八十年代，他一度与修拉、西涅克共同探索新印象派，后来又回到更自由的笔触。这种变化不是离开观察，而是持续寻找色彩和结构的关系。他的画面很少追求奇观，常从劳动、季节与日常交通中建立稳定的节奏，使普通生活成为现代绘画长期而严肃的主题。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Camille_Pissarro"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q134741"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/camille-pissarro"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Camille_Pissarro",
+    "portraitUrl": "portraits/camille-pissarro-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Pissarro-portrait.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "james-mcneill-whistler",
+    "nameZh": "詹姆斯·麦克尼尔·惠斯勒",
+    "nameOriginal": "James McNeill Whistler",
+    "birthYear": 1834,
+    "deathYear": 1903,
+    "lifespan": "1834–1903",
+    "nationality": "美国 · 主要活跃于英国和法国",
+    "movement": "唯美主义",
+    "description": "以灰调、夜色和音乐般的色彩关系，组织画面。",
+    "biography": "惠斯勒出生于美国，少年时一度生活在俄国，成年后到巴黎学习，并长期居于伦敦。他画泰晤士河、城市夜景和人物肖像，逐渐把重点从叙事情节移向色彩、形体与气氛的关系，常以“交响曲”“夜曲”“安排”等音乐词汇为作品命名。\n\n日本艺术和平面构图对他影响深远。《惠斯勒的母亲》以节制的灰黑色和清晰位置，使私人肖像成为严密的形式研究。他也以蚀刻和石版探索城市空间，艺术观念曾引起公共争论。惠斯勒在写实观察与审美自主之间开辟道路，对象征主义、装饰艺术和现代绘画产生了重要影响。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/James_McNeill_Whistler"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q203643"
+      },
+      {
+        "label": "大都会艺术博物馆 · 艺术史研究",
+        "url": "https://www.metmuseum.org/essays/james-mcneill-whistler-1834-1903"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/James_McNeill_Whistler",
+    "portraitUrl": "portraits/james-mcneill-whistler-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Whistler_Selbstportr%C3%A4t.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "pierre-bonnard",
+    "nameZh": "皮埃尔·博纳尔",
+    "nameOriginal": "Pierre Bonnard",
+    "birthYear": 1867,
+    "deathYear": 1947,
+    "lifespan": "1867–1947",
+    "nationality": "法国",
+    "movement": "纳比派",
+    "description": "让室内、花园与记忆，在温暖色彩中缓缓重叠。",
+    "biography": "波纳尔出生于巴黎附近，年轻时参加纳比派，与同伴探索绘画的平面与装饰性。高更的色块和日本版画的构图对他产生启发，他的创作包括绘画、版画、海报和书籍插图。后来，家中的餐桌、窗边、浴室与花园逐渐成为长期主题。\n\n他常根据记忆和素描组织画面，而不只是即时描摹眼前场景。颜色在人物和空间之间流动，熟悉的生活也因视角、光线和时间而变得陌生。长期伴侣玛尔特频繁出现在作品中。波纳尔把印象派的光色经验与现代绘画的平面探索连接起来，使私人生活成为持续而细腻的色彩实验。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Pierre_Bonnard"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q26408"
+      },
+      {
+        "label": "克利夫兰美术馆 · 作者生平",
+        "url": "https://www.clevelandart.org/art/1949.18"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Pierre_Bonnard",
+    "portraitUrl": "portraits/pierre-bonnard-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:T%C3%AAte_de_Bonnard_(Portrait_photograph_of_Pierre_Bonnard),_c.1899,_Mus%C3%A9e_d%27Orsay.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片，约1899年（原件有损伤）",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "paul-signac",
+    "nameZh": "保罗·西涅克",
+    "nameOriginal": "Paul Signac",
+    "birthYear": 1863,
+    "deathYear": 1935,
+    "lifespan": "1863–1935",
+    "nationality": "法国",
+    "movement": "新印象派",
+    "description": "以明亮色块与港口风景，编织水面上的光。",
+    "biography": "西涅克出生于巴黎，早年受印象派影响，后来与修拉共同推动新印象派。他研究色彩的相互作用，以分离的色点和色块组织画面，避免在调色板上把颜色过度混合。海岸、港口与河流是他长期的题材，航海也使观察自然与创作紧密相连。\n\n修拉去世后，他继续发展这一方法，笔触逐渐变得更大、更明亮，并以文字阐释新印象派的观念。他也参与独立艺术展览，支持年轻画家。作品中的色彩既来自光线观察，也服从严密的画面结构；这种将理论与旅行经验结合的实践，为野兽派及二十世纪色彩绘画提供了重要启发。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Paul_Signac"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q151573"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/paul-signac"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Paul_Signac",
+    "portraitUrl": "portraits/paul-signac-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Paul_Signac,_ca._1883.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "meindert-hobbema",
+    "nameZh": "梅因德特·霍贝玛",
+    "nameOriginal": "Meindert Hobbema",
+    "birthYear": 1638,
+    "deathYear": 1709,
+    "lifespan": "1638–1709",
+    "nationality": "荷兰",
+    "movement": "荷兰黄金时代",
+    "description": "以林间道路、水磨与池塘，描绘日光中的乡野。",
+    "biography": "霍贝玛出生于阿姆斯特丹，是鲁伊斯达尔有记录的学生。他在十七世纪六十年代创作大量风景，以树林、道路、水磨和池塘见长。光线从树冠之间落下，前景与远处的村落通过路径相连，熟悉的荷兰乡野因细致安排而显得开阔、清晰。\n\n结婚并担任税务相关职务之后，他的绘画产量减少。《米德尔哈尼斯的林荫道》以显著的透视和树木节奏，成为其晚期代表作。他生前并未获得后来同样广泛的声誉，十八世纪之后尤其受到收藏家欣赏。现有常见头像制作于其去世一百多年后，缺乏可靠相貌依据，本馆暂不采用。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Meindert_Hobbema"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q336908"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/meindert-hobbema"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Meindert_Hobbema",
+    "portraitUrl": "",
+    "portraitSourceUrl": "",
+    "portraitRights": "",
+    "portraitCaption": "",
+    "portraitMissingReason": "常见肖像创作于十九世纪，缺乏本人相貌依据。"
+  },
+  {
+    "artistSlug": "artemisia-gentileschi",
+    "nameZh": "阿尔泰米西娅·真蒂莱斯基",
+    "nameOriginal": "Artemisia Gentileschi",
+    "birthYear": 1593,
+    "deathYear": null,
+    "lifespan": "1593–1654年后",
+    "nationality": "意大利",
+    "movement": "巴洛克",
+    "description": "以坚定目光和有力身体，让女性成为故事的中心。",
+    "biography": "阿尔泰米西娅出生于罗马，在父亲奥拉齐奥的画室学习，受到卡拉瓦乔式明暗与现实人物画法的影响。她在佛罗伦萨发展，并成为当地绘画学院的成员，后来也在那不勒斯、罗马和伦敦工作，在男性主导的职业环境中建立独立的委托与声誉。\n\n她多次描绘朱迪思等女性角色，以有力的身体、明确的行动和心理张力重组传统叙事。关于早年遭受性暴力的审判档案保存下来，但其作品不应只被这一经历解释。她是巴洛克绘画的重要艺术家，也使女性画家的训练、劳动与创造能力重新进入艺术史的讨论。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Artemisia_Gentileschi"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q212657"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/artemisia-gentileschi"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Artemisia_Gentileschi",
+    "portraitUrl": "portraits/artemisia-gentileschi-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Self-portrait_as_the_Allegory_of_Painting_(La_Pittura)_-_Artemisia_Gentileschi.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "raphael",
+    "nameZh": "拉斐尔",
+    "nameOriginal": "Raphael",
+    "birthYear": 1483,
+    "deathYear": 1520,
+    "lifespan": "1483–1520",
+    "nationality": "意大利",
+    "movement": "文艺复兴",
+    "description": "以清晰构图和均衡人物，让画面呈现从容的秩序。",
+    "biography": "拉斐尔出生于乌尔比诺的画家家庭，年轻时在意大利中部学习与工作，后来到佛罗伦萨研究达·芬奇和米开朗琪罗的艺术。他以清晰的构图、自然的人物关系和柔和的形体建立声誉，圣母子、肖像与宗教场景成为重要题材。\n\n1508年起，他在罗马为教皇工作，《雅典学院》等梵蒂冈壁画把古典学问与文艺复兴理想组织成宏大的空间。他也承担建筑和大型画室委托，短暂生涯却留下广泛影响。作为盛期文艺复兴的核心画家，拉斐尔让复杂叙事具有清楚而从容的秩序，成为后来学院艺术长期研究的范本。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Raphael"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5597"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/raphael"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Raphael",
+    "portraitUrl": "portraits/raphael-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "titian",
+    "nameZh": "提香",
+    "nameOriginal": "Titian",
+    "birthYear": 1490,
+    "deathYear": 1576,
+    "lifespan": "约1490–1576",
+    "nationality": "意大利 · 威尼斯",
+    "movement": "文艺复兴",
+    "description": "以丰厚色彩和松动笔触，塑造人物、肌肤与光。",
+    "biography": "提香出生于意大利北部的卡多雷，年轻时来到威尼斯学习，接触贝利尼和乔尔乔内的绘画。他以色彩塑造身体与空间，题材涵盖宗教、神话、肖像和风景，为威尼斯以及欧洲宫廷的重要委托人工作，逐渐形成具有国际影响的事业。\n\n漫长的生涯中，他的画法不断变化：早期色彩明亮、形体饱满，晚期则以更松动的笔触和深厚色调组织画面，让颜料本身成为观看的一部分。他的出生年份尚不确切，因此这里只作约数显示。作为威尼斯画派的核心人物，提香影响了鲁本斯、委拉斯开兹等后来的画家，也拓展了色彩与笔触的表现能力。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Titian"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q47551"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/titian"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Titian",
+    "portraitUrl": "portraits/titian-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Titian_-_Self-portrait_(Museo_del_Prado).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "leonardo-da-vinci",
+    "nameZh": "莱昂纳多·达·芬奇",
+    "nameOriginal": "Leonardo da Vinci",
+    "birthYear": 1452,
+    "deathYear": 1519,
+    "lifespan": "1452–1519",
+    "nationality": "意大利 · 晚年活跃于法国",
+    "movement": "文艺复兴",
+    "description": "以细密观察与柔和明暗，连接自然、身体和知识。",
+    "biography": "达·芬奇出生于托斯卡纳的芬奇附近，在佛罗伦萨的韦罗基奥画室接受训练，后来为米兰的斯福尔扎宫廷工作。他的研究跨越绘画、解剖、工程和自然观察，笔记中大量记录身体、植物、水流与机械的结构，希望从可见世界中理解其运作。\n\n《最后的晚餐》和《蒙娜丽莎》把人物心理、空间关系与柔和明暗结合起来。许多计划没有完成，幸存绘画也不多，但其方法深刻改变了文艺复兴艺术。晚年他应法国国王邀请来到法国。持续提问和亲自观察，使他的绘画不只是一种技巧，也成为连接艺术与知识的探索。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q762"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/leonardo-da-vinci"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+    "portraitUrl": "portraits/leonardo-da-vinci-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo_(colour_correction).png",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "michelangelo",
+    "nameZh": "米开朗基罗",
+    "nameOriginal": "Michelangelo",
+    "birthYear": 1475,
+    "deathYear": 1564,
+    "lifespan": "1475–1564",
+    "nationality": "意大利",
+    "movement": "文艺复兴",
+    "description": "以富于力量的身体，将精神冲突凝成形体。",
+    "biography": "米开朗琪罗出生于托斯卡纳，年轻时在佛罗伦萨学习绘画和雕塑，并获得美第奇家族的支持。他以《圣殇》和《大卫》建立声誉，后来长期在罗马工作，承担雕塑、壁画与建筑委托。人体的结构、扭转和重量，是他贯穿不同媒介的核心语言。\n\n西斯廷礼拜堂天顶画与《最后的审判》，把大量人物组织成关于创世、信仰与命运的宏大叙事。晚年他参与圣彼得大教堂的设计。虽然常以雕塑家的身份理解自己，他却深刻改变了绘画对身体和空间的表现，成为盛期文艺复兴及后来矫饰主义不可绕开的艺术家。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Michelangelo"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5592"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/michelangelo"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Michelangelo",
+    "portraitUrl": "portraits/michelangelo-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "ivan-aivazovsky",
+    "nameZh": "伊万·艾瓦佐夫斯基",
+    "nameOriginal": "Ivan Aivazovsky",
+    "birthYear": 1817,
+    "deathYear": 1900,
+    "lifespan": "1817–1900",
+    "nationality": "俄国帝国 · 亚美尼亚裔",
+    "movement": "浪漫主义",
+    "description": "让海浪、云层与晨昏的光，呈现海洋的力量。",
+    "biography": "艾瓦佐夫斯基出生于克里米亚的费奥多西亚，来自亚美尼亚家庭，后来在圣彼得堡帝国美术学院学习。他广泛旅行，长期以海洋为主要题材，也描绘港口、海战和沿岸生活。海面的透明层次、云中的光线与船只的尺度关系，形成了鲜明的个人语言。\n\n他的作品往往在写生经验基础上于画室完成，既包含自然观察，也经过浪漫主义式的组织。《第九浪》等画面将人在巨大海浪前的处境置于中心。回到家乡后，他继续创作并参与地方文化建设。作为十九世纪重要的海景画家，他使海洋成为光色、运动与情感共同展开的舞台。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Ivan_Aivazovsky"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q181568"
+      },
+      {
+        "label": "Getty Research · 艺术家权威档案",
+        "url": "https://www.getty.edu/vow/ULANFullDisplay?find=Aivazovsky&role=&nation=&subjectid=500021161"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ivan_Aivazovsky",
+    "portraitUrl": "portraits/ivan-aivazovsky-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Aivazovsky_-_Self-portrait_1874_(cropped).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "ilya-repin",
+    "nameZh": "伊利亚·列宾",
+    "nameOriginal": "Ilya Repin",
+    "birthYear": 1844,
+    "deathYear": 1930,
+    "lifespan": "1844–1930",
+    "nationality": "俄国帝国 · 出生于今乌克兰",
+    "movement": "现实主义",
+    "description": "以细致人物和有力叙事，直面社会生活与历史。",
+    "biography": "列宾出生于丘古耶夫，早年学习圣像绘画，后来进入圣彼得堡美术学院。他曾在巴黎生活，接触新的绘画方法，随后加入巡回展览画派，关注俄国社会中的劳动、权力和历史经验。《伏尔加河上的纤夫》让沉重的劳动与人物个性同时进入大型画面。\n\n他也为托尔斯泰等文化人物绘制肖像，在目光、姿态和环境中保留复杂的心理信息。晚年长期居于库奥卡拉，经历战争与政治变迁。作为十九世纪现实主义的重要代表，列宾不把人物化为简单符号，而以深入观察和叙事能力，使艺术面对时代中的真实处境。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Ilya_Repin"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q172911"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/ilya-repin"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ilya_Repin",
+    "portraitUrl": "portraits/ilya-repin-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:RepinSelfPortrait_(cropped).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "eugene-delacroix",
+    "nameZh": "欧仁·德拉克洛瓦",
+    "nameOriginal": "Eugène Delacroix",
+    "birthYear": 1798,
+    "deathYear": 1863,
+    "lifespan": "1798–1863",
+    "nationality": "法国",
+    "movement": "浪漫主义",
+    "description": "以流动色彩和戏剧性动作，让历史带着情感展开。",
+    "biography": "德拉克洛瓦出生于法国，在巴黎接受训练，逐渐成为浪漫主义绘画的重要代表。他研究鲁本斯等古代大师，也受到文学与当代事件的启发，以流动构图、鲜明色彩和剧烈动作，挑战新古典主义强调的稳定秩序。《自由引导人民》回应了1830年的革命。\n\n1832年的北非旅行扩展了他的题材和色彩经验，随后他还承担宫殿与教堂的大型装饰委托。绘画中的历史、情感与异域想象，也需要结合十九世纪欧洲的文化视角理解。他对色彩相互作用的探索深刻影响了印象派与后印象派，使绘画具有超越轮廓和叙事的表现力量。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Delacroix"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q33477"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/eugene-delacroix"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Delacroix",
+    "portraitUrl": "portraits/eugene-delacroix-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "sandro-botticelli",
+    "nameZh": "桑德罗·波提切利",
+    "nameOriginal": "Sandro Botticelli",
+    "birthYear": 1445,
+    "deathYear": 1510,
+    "lifespan": "约1445–1510",
+    "nationality": "意大利 · 佛罗伦萨",
+    "movement": "文艺复兴",
+    "description": "以优雅线条和轻盈人物，让神话与精神经验相遇。",
+    "biography": "波提切利出生于佛罗伦萨，师从菲利波·利皮，后来建立自己的画室，并得到美第奇家族及其圈子的委托。他创作宗教画、肖像和神话题材，《春》和《维纳斯的诞生》以流动线条、轻盈形体和富于象征的细节，呈现十五世纪佛罗伦萨的人文环境。\n\n他也曾到罗马参与西斯廷礼拜堂的装饰。晚期作品更趋严肃，其风格与时代的宗教、政治变化相伴，但具体影响仍需谨慎讨论。去世后声誉一度下降，十九世纪重新获得关注。作为早期文艺复兴的重要画家，他让线条与人物姿态成为连接感官美、神话和精神意义的语言。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Sandro_Botticelli"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5669"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/sandro-botticelli"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sandro_Botticelli",
+    "portraitUrl": "portraits/sandro-botticelli-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_083.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "jan-van-eyck",
+    "nameZh": "扬·凡·艾克",
+    "nameOriginal": "Jan van Eyck",
+    "birthYear": 1390,
+    "deathYear": 1441,
+    "lifespan": "约1390–1441",
+    "nationality": "尼德兰 · 主要活跃于布鲁日",
+    "movement": "北方文艺复兴",
+    "description": "以透明色层与细密光线，呈现物质世界的质感。",
+    "biography": "扬·凡·艾克活跃于十五世纪的尼德兰，曾在海牙工作，后来成为勃艮第公爵菲利普三世的宫廷画家，也承担外交任务。他的早年资料有限，出生年份并不确切。宗教画和肖像中，对衣料、金属、玻璃与自然光的精密描写，形成极具辨识度的视觉世界。\n\n他善用油性颜料和透明色层，但并非油画的发明者；更重要的是将这些技术发展为细致而统一的画面语言。《阿尔诺芬尼夫妇像》让私人室内具有复杂的观看和象征关系。他是早期尼德兰绘画的核心人物，改变了北方文艺复兴呈现人物、空间与物质表面的方式。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Jan_van_Eyck"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q102272"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/jan-van-eyck"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jan_van_Eyck",
+    "portraitUrl": "",
+    "portraitSourceUrl": "",
+    "portraitRights": "",
+    "portraitCaption": "",
+    "portraitMissingReason": "《男子肖像》可能为自画像，但身份尚未确定。"
+  },
+  {
+    "artistSlug": "hieronymus-bosch",
+    "nameZh": "希罗尼穆斯·博斯",
+    "nameOriginal": "Hieronymus Bosch",
+    "birthYear": 1450,
+    "deathYear": 1516,
+    "lifespan": "约1450–1516",
+    "nationality": "尼德兰 · 布拉班特",
+    "movement": "北方文艺复兴",
+    "description": "让奇异生物与日常细节，交织成人的欲望和忧惧。",
+    "biography": "博斯出生并主要生活在斯海尔托亨博斯，来自画家家庭，个人生平的可靠记录并不多。他创作宗教题材和三联画，以细小人物、奇异生物与不合常理的组合，呈现欲望、诱惑、惩罚和人类处境。《人间乐园》是这一复杂语言的代表。\n\n这些形象不是现代幻想的简单前身，而与当时的宗教观念、谚语和视觉传统紧密相关。由于画室作品与追随者众多，具体归属也长期受到研究。博斯影响了勃鲁盖尔等后来的艺术家，二十世纪又被超现实主义者重新关注。他让绘画在熟悉的世界中打开令人不安、难以穷尽的想象空间。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Hieronymus_Bosch"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q130531"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/hieronymus-bosch"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hieronymus_Bosch",
+    "portraitUrl": "portraits/hieronymus-bosch-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_(cropped).jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像，约1550年，传雅克·勒布克作（非自画像）",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "francisco-goya",
+    "nameZh": "弗朗西斯科·戈雅",
+    "nameOriginal": "Francisco Goya",
+    "birthYear": 1746,
+    "deathYear": 1828,
+    "lifespan": "1746–1828",
+    "nationality": "西班牙 · 晚年居于法国",
+    "movement": "浪漫主义",
+    "description": "以敏锐目光和深暗想象，记录时代中的人性。",
+    "biography": "戈雅出生于西班牙阿拉贡地区，从地方训练走向马德里宫廷，曾为王室制作挂毯稿与肖像。1790年代的一次重病使他失聪，此后版画与私人绘画更多呈现讽刺、恐惧和梦魇。公共身份与内在观察在他的作品中始终并存，而不能用单一风格概括。\n\n战争和政治变迁进一步改变了创作，《1808年5月3日》以及《战争的灾难》直面暴力与苦难。晚年他居于法国波尔多。戈雅既掌握古代大师的传统，又以开放、尖锐的画面面对现代世界，因此常被视为连接古典绘画与现代艺术的重要人物。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Francisco_Goya"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q5432"
+      },
+      {
+        "label": "芝加哥艺术博物馆 · 艺术家档案",
+        "url": "https://www.artic.edu/artists/40615/francisco-jose-de-goya-y-lucientes"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Francisco_Goya",
+    "portraitUrl": "portraits/francisco-goya-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "wassily-kandinsky",
+    "nameZh": "瓦西里·康定斯基",
+    "nameOriginal": "Wassily Kandinsky",
+    "birthYear": 1866,
+    "deathYear": 1944,
+    "lifespan": "1866–1944",
+    "nationality": "俄国 · 活跃于德国及法国",
+    "movement": "抽象主义",
+    "description": "以自由色彩与节奏，让画面脱离具体物象。",
+    "biography": "康定斯基出生于莫斯科，先学习法律和经济，三十岁前后决定转向艺术，来到慕尼黑接受绘画训练。他从风景和民间艺术中逐渐探索色彩与形体的独立力量，并与马克等人推动“蓝骑士”的艺术活动，尝试使绘画表达无法直接描摹的内在经验。\n\n第一次世界大战后，他曾返回俄国，后来在德国包豪斯任教；学校关闭后移居法国。创作从自由流动的形态转向更明确的几何结构，但始终关心颜色、线条与节奏的关系。作为抽象艺术的重要先驱，他通过绘画和理论写作，扩展了艺术超越物象再现的可能性。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Wassily_Kandinsky"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q61064"
+      },
+      {
+        "label": "芝加哥艺术博物馆 · 艺术家档案",
+        "url": "https://www.artic.edu/artists/35188/vasily-kandinsky"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Wassily_Kandinsky",
+    "portraitUrl": "portraits/wassily-kandinsky-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史照片 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "franz-marc",
+    "nameZh": "弗兰茨·马尔克",
+    "nameOriginal": "Franz Marc",
+    "birthYear": 1880,
+    "deathYear": 1916,
+    "lifespan": "1880–1916",
+    "nationality": "德国",
+    "movement": "表现主义",
+    "description": "用明亮色彩和简化动物，寻找自然中的精神力量。",
+    "biography": "弗朗茨·马克出生于慕尼黑，接受学院训练，并在旅行中接触新的欧洲绘画。他逐渐以动物为主要题材，通过蓝、黄、红等鲜明颜色和简化形体，表达对自然与精神生活的想象。动物并不只是写生对象，也成为重新思考人与世界关系的媒介。\n\n他与康定斯基共同推动“蓝骑士”出版和展览活动，晚期作品进一步吸收立体主义与抽象倾向，将身体和环境组织成碎裂而有节奏的结构。第一次世界大战中，他被征召入伍，1916年死于凡尔登战役。短暂生涯使他成为德国表现主义的重要人物，并留下独特的动物与色彩世界。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Franz_Marc"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q44054"
+      },
+      {
+        "label": "芝加哥艺术博物馆 · 艺术家档案",
+        "url": "https://www.artic.edu/artists/16157/franz-marc"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Franz_Marc",
+    "portraitUrl": "portraits/franz-marc-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Franz_Marc_1912.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "历史肖像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "jean-baptiste-simeon-chardin",
+    "nameZh": "让-巴蒂斯特-西梅翁·夏尔丹",
+    "nameOriginal": "Jean-Baptiste-Siméon Chardin",
+    "birthYear": 1699,
+    "deathYear": 1779,
+    "lifespan": "1699–1779",
+    "nationality": "法国",
+    "movement": "18世纪法国绘画",
+    "description": "以柔和光线和沉稳物件，描绘日常生活的专注。",
+    "biography": "夏尔丹出生于巴黎，父亲是木匠，年轻时在画室学习，后来进入法国皇家绘画与雕塑学院。他没有主要选择宏大的神话和历史场景，而描绘厨房器具、食物、家庭劳动和儿童的学习与游戏，让不起眼的物件获得清晰而安静的存在感。\n\n平衡的构图、柔和的光与厚薄变化的颜料，使物体具有真实触感，也让人物的专注成为主题。他的职业生涯在静物和风俗画之间展开，晚年还创作粉彩肖像。作为十八世纪法国的重要画家，夏尔丹让日常生活摆脱装饰性的附属地位，成为可以反复、缓慢观看的严肃艺术。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Jean_Sim%C3%A9on_Chardin"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q207447"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/jean-simeon-chardin"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jean_Sim%C3%A9on_Chardin",
+    "portraitUrl": "portraits/jean-baptiste-simeon-chardin-320.webp",
+    "portraitSourceUrl": "https://commons.wikimedia.org/wiki/File:Chardin_pastel_selfportrait.jpg",
+    "portraitRights": "Public domain",
+    "portraitCaption": "自画像 · Wikimedia Commons",
+    "portraitMissingReason": ""
+  },
+  {
+    "artistSlug": "francisco-de-zurbaran",
+    "nameZh": "弗朗西斯科·德·苏巴朗",
+    "nameOriginal": "Francisco de Zurbarán",
+    "birthYear": 1598,
+    "deathYear": 1664,
+    "lifespan": "1598–1664",
+    "nationality": "西班牙",
+    "movement": "巴洛克",
+    "description": "以节制光线和坚实物件，让日常显露精神重量。",
+    "biography": "苏巴朗出生于西班牙埃斯特雷马杜拉地区，年轻时在塞维利亚学习，后来为当地宗教团体制作大量绘画。他以修士、圣徒和静物闻名，常用深暗背景与明确光线，让衣料、面孔和器物呈现近乎雕塑的重量。克制的动作使精神生活显得直接而严肃。\n\n他曾到马德里参与王宫装饰委托，晚年事业却不如早期顺利。宗教人物与普通杯盘在其作品中共享相似的专注，使物质表面与信仰经验紧密相连。作为西班牙巴洛克的重要画家，他在强烈明暗之外保留一种静止、简朴的力量，也使静物具有超越用途的观看价值。",
+    "biographySources": [
+      {
+        "label": "Wikipedia · 生平概述",
+        "url": "https://en.wikipedia.org/wiki/Francisco_de_Zurbar%C3%A1n"
+      },
+      {
+        "label": "Wikidata · 身份与生卒资料",
+        "url": "https://www.wikidata.org/wiki/Q209615"
+      },
+      {
+        "label": "英国国家美术馆 · 艺术家档案",
+        "url": "https://www.nationalgallery.org.uk/artists/francisco-de-zurbaran"
+      }
+    ],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Francisco_de_Zurbar%C3%A1n",
+    "portraitUrl": "",
+    "portraitSourceUrl": "",
+    "portraitRights": "",
+    "portraitCaption": "",
+    "portraitMissingReason": "常用画像仅被认为可能是本人，暂不采用。"
   }
 ]

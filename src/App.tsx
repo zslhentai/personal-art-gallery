@@ -26,6 +26,7 @@ import Viewer from "./Viewer";
 import SaveArtwork from "./SaveArtwork";
 import { canonicalTag, randomArtwork } from "./curation";
 import artistProfiles from "./data/artists.json";
+import ArtistPortrait from "./ArtistPortrait";
 import tagCoverOverrides from "./data/tag-covers.json";
 import { selectTagCovers } from "./tagCovers";
 import { usePwa, applyPwaUpdate } from "./pwa";
@@ -428,7 +429,7 @@ function ArtworkDetail({
           </p>
           <a
             className="artist-link"
-            href={galleryLink("artist", artwork.artistSlug)}
+            href={`#/artist/${artwork.artistSlug}`}
           >
             {artwork.artistZh}
             <span>{artwork.artist}</span>
@@ -570,6 +571,66 @@ function ArtworkDetail({
     </>
   );
 }
+function ArtistDetail({ profile }: { profile: (typeof artistProfiles)[number] }) {
+  const items = artworks.filter((a) => a.artistSlug === profile.artistSlug);
+  return (
+    <article className="artist-detail">
+      <a className="artist-back" href="#/artists">
+        ← 画家名录
+      </a>
+      <header className="artist-hero">
+        <ArtistPortrait profile={profile} eager />
+        <div>
+          <p className="eyebrow">ARTIST ARCHIVE</p>
+          <h1>{profile.nameZh}</h1>
+          <p className="artist-original">{profile.nameOriginal}</p>
+          <p className="artist-lifespan">{profile.lifespan}</p>
+          <p className="artist-context">
+            {profile.nationality} · {profile.movement}
+          </p>
+        </div>
+      </header>
+      <div className="artist-biography">
+        {profile.biography.split("\n\n").map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+        <details className="artist-sources">
+          <summary>资料与肖像来源</summary>
+          <ul>
+            {profile.biographySources.map((source) => (
+              <li key={source.url}>
+                <a href={source.url} target="_blank" rel="noreferrer">
+                  {source.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+          {profile.portraitSourceUrl ? (
+            <p>
+              <a href={profile.portraitSourceUrl} target="_blank" rel="noreferrer">
+                {profile.portraitCaption} ↗
+              </a>
+              <br />
+              {profile.portraitRights}
+            </p>
+          ) : (
+            <p>{profile.portraitMissingReason}</p>
+          )}
+        </details>
+      </div>
+      <section className="artist-works" aria-label="本馆收藏">
+        <div className="artist-works-heading">
+          <div>
+            <p className="eyebrow">WORKS IN THIS COLLECTION</p>
+            <h2>本馆收藏</h2>
+          </div>
+          <span>{items.length} 件作品</span>
+        </div>
+        <GalleryGrid items={items} />
+      </section>
+    </article>
+  );
+}
 function IndexPage({ type }: { type: "artists" | "tags" }) {
   const artists = Array.from(
     new Map(artworks.map((a) => [a.artistSlug, a])).values(),
@@ -600,13 +661,23 @@ function IndexPage({ type }: { type: "artists" | "tags" }) {
             : undefined;
           return (
             <a
-              className="index-item"
+              className={`index-item${isArtist ? " artist-index-item" : ""}`}
               aria-label={`${isArtist ? item.artistZh : item} · ${matches.length} 件作品`}
               key={key}
-              href={galleryLink(isArtist ? "artist" : "tag", key)}
+              href={isArtist ? `#/artist/${key}` : galleryLink("tag", key)}
             >
               <div className="index-preview">
-                <ArtworkImage artwork={representative} />
+                {isArtist ? (
+                  profile ? (
+                    <ArtistPortrait profile={profile} />
+                  ) : (
+                    <div className="artist-portrait">
+                      <span className="portrait-unavailable">肖像待考</span>
+                    </div>
+                  )
+                ) : (
+                  <ArtworkImage artwork={representative} />
+                )}
               </div>
               <div className="index-label">
                 <h2>{isArtist ? item.artistZh : item}</h2>
@@ -673,9 +744,12 @@ export default function App() {
   const artwork = path.startsWith("/artwork/")
     ? artworks.find((a) => a.slug === path.split("/")[2])
     : undefined;
+  const artist = path.startsWith("/artist/")
+    ? artistProfiles.find((a) => a.artistSlug === path.split("/")[2])
+    : undefined;
   useEffect(() => {
-    document.title = `${artwork ? artwork.titleZh : path === "/favorites" ? "我的收藏" : path === "/artists" ? "画家" : path === "/tags" ? "标签" : path === "/my-gallery" ? "备份与安装" : "画廊"} · 私人美术馆`;
-  }, [artwork, path]);
+    document.title = `${artist ? artist.nameZh : artwork ? artwork.titleZh : path === "/favorites" ? "我的收藏" : path === "/artists" ? "画家" : path === "/tags" ? "标签" : path === "/my-gallery" ? "备份与安装" : "画廊"} · 私人美术馆`;
+  }, [artwork, artist, path]);
   const restore = (next: PersonalLibrary) => {
     try {
       localStorage.setItem(libraryKey, JSON.stringify(next));
@@ -719,7 +793,7 @@ export default function App() {
   const unknown =
     !["/", "", "/favorites", "/artists", "/tags", "/my-gallery"].includes(
       path,
-    ) && !artwork;
+    ) && !artwork && !artist;
   return (
     <>
       <a
@@ -752,7 +826,9 @@ export default function App() {
               key={href}
               href={`#${href}`}
               aria-current={
-                path === href || (href === "/" && path === "")
+                path === href ||
+                (href === "/" && path === "") ||
+                (href === "/artists" && !!artist)
                   ? "page"
                   : undefined
               }
@@ -813,6 +889,8 @@ export default function App() {
             update={(patch) => update(artwork.id, patch)}
             onRandom={random}
           />
+        ) : artist ? (
+          <ArtistDetail key={artist.artistSlug} profile={artist} />
         ) : path === "/my-gallery" ? (
           <Suspense
             fallback={
@@ -825,8 +903,12 @@ export default function App() {
           <IndexPage type={path.slice(1) as "artists" | "tags"} />
         ) : unknown ? (
           <div className="empty-state">
-            <p className="eyebrow">ARTWORK NOT FOUND</p>
-            <h1>这件作品还未入馆</h1>
+            <p className="eyebrow">
+              {path.startsWith("/artist/") ? "ARTIST NOT FOUND" : "ARTWORK NOT FOUND"}
+            </p>
+            <h1>
+              {path.startsWith("/artist/") ? "这位画家尚未入馆" : "这件作品还未入馆"}
+            </h1>
             <a href="#/">返回画廊 →</a>
           </div>
         ) : (

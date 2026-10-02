@@ -198,7 +198,7 @@ img {
   outline: none;
 }
 .gallery-intro {
-  padding: 56px 0 48px;
+  padding: 32px 0 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -212,15 +212,15 @@ img {
 }
 .gallery-intro h1 {
   font-family: "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif;
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 400;
-  letter-spacing: 5px;
-  line-height: 1.5;
-  margin: 20px 0 16px;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  margin: 12px 0 10px;
 }
 .intro-description {
   font-size: 13px;
-  line-height: 2.2;
+  line-height: 1.85;
   color: var(--muted);
   letter-spacing: 1px;
 }
@@ -493,17 +493,17 @@ img {
   align-items: center;
 }
 .section-heading {
-  padding: 72px 0 56px;
+  padding: 32px 0 28px;
 }
 .section-heading h1 {
   font:
-    400 38px/1.6 "Songti SC",
+    400 38px/1.4 "Songti SC",
     "STSong",
     "Noto Serif CJK SC",
     Georgia,
     serif;
   letter-spacing: 3px;
-  margin: 20px 0 16px;
+  margin: 12px 0 10px;
 }
 .section-description {
   font-size: 13px;
@@ -905,10 +905,10 @@ img {
     padding: 0 32px 30px;
   }
   .gallery-intro {
-    padding: 48px 0;
+    padding: 32px 0 28px;
   }
   .gallery-intro h1 {
-    font-size: 42px;
+    font-size: 38px;
   }
   .intro-note {
     margin-right: 0;
@@ -1025,22 +1025,23 @@ img {
     padding: 0 20px;
   }
   .gallery-intro {
-    padding: 32px 0 28px;
+    padding: 16px 0;
     align-items: start;
   }
-  .gallery-intro .eyebrow {
+  .gallery-intro .eyebrow,
+  .section-heading .eyebrow {
     font-size: 9px;
     letter-spacing: 1.1px;
   }
   .gallery-intro h1 {
-    font-size: 32px;
+    font-size: 30px;
     letter-spacing: 2px;
-    margin: 16px 0 12px;
-    line-height: 1.5;
+    margin: 10px 0 6px;
+    line-height: 1.4;
   }
   .intro-description {
     font-size: 11px;
-    line-height: 2.2;
+    line-height: 1.8;
     letter-spacing: 0.7px;
   }
   .intro-note {
@@ -1165,12 +1166,13 @@ img {
     white-space: nowrap;
   }
   .section-heading {
-    padding: 42px 0 36px;
+    padding: 16px 0;
   }
   .section-heading h1 {
-    font-size: 28px;
+    font-size: 30px;
     letter-spacing: 2px;
-    margin: 18px 0 12px;
+    margin: 10px 0 6px;
+    line-height: 1.4;
   }
   .section-description {
     font-size: 11px;
@@ -1411,3 +1413,48 @@ img {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+/* Artist archives share the existing gallery typography and quiet wall labels. */
+.artist-portrait {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--image-bg);
+}
+.artist-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.portrait-unavailable { display: grid; place-items: center; height: 100%; font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+.artist-index-item { align-items: start; }
+.artist-index-item .index-label { min-width: 0; }
+.artist-index-item .index-label p { overflow-wrap: anywhere; }
+.artist-back { display: inline-flex; align-items: center; min-height: 44px; margin-top: 16px; font-size: 11px; color: var(--muted); }
+.artist-hero { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 36px; align-items: center; margin: 20px 0 28px; }
+.artist-hero h1 { font: 400 36px/1.4 "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif; margin: 10px 0 8px; letter-spacing: 2px; }
+.artist-original { font-size: 16px; line-height: 1.6; }
+.artist-lifespan { font-size: 13px; margin-top: 10px; color: var(--muted); }
+.artist-context { font-size: 12px; line-height: 1.8; margin-top: 12px; color: var(--muted); }
+.artist-biography { max-width: 760px; font-size: 14px; line-height: 2.1; }
+.artist-biography > p + p { margin-top: 14px; }
+.artist-sources { color: var(--muted); font-size: 11px; line-height: 1.9; margin-top: 14px; }
+.artist-sources summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 8px; list-style: none; width: fit-content; }
+.artist-sources ul { padding-left: 18px; margin-bottom: 12px; }
+.artist-sources a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.artist-works { margin-top: 36px; }
+.artist-works-heading { display: flex; justify-content: space-between; align-items: end; border-top: 1px solid var(--line); padding: 24px 0; }
+.artist-works-heading h2 { font: 400 24px/1.5 "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif; margin-top: 6px; letter-spacing: 2px; }
+.artist-works-heading > span { font-size: 11px; color: var(--muted); }
+@media (max-width: 600px) {
+  .artist-back { margin-top: 8px; }
+  .artist-hero { grid-template-columns: 104px minmax(0, 1fr); gap: 20px; align-items: start; margin: 16px 0 22px; }
+  .artist-hero h1 { font-size: 25px; letter-spacing: 1px; margin: 8px 0 6px; }
+  .artist-hero .eyebrow { font-size: 9px; letter-spacing: 1px; }
+  .artist-original { font-size: 12px; overflow-wrap: anywhere; }
+  .artist-lifespan { font-size: 11px; margin-top: 8px; }
+  .artist-context { font-size: 11px; margin-top: 8px; }
+  .artist-biography { font-size: 13px; line-height: 2; }
+  .artist-works { margin-top: 28px; }
+  .artist-works-heading { padding: 20px 0; }
+}
+.artist-sources summary::-webkit-details-marker { display: none; }
+.artist-sources summary::before { content: ""; width: 5px; height: 5px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(-45deg); flex: none; }
+.artist-sources[open] summary::before { transform: rotate(45deg); }
+
+.artist-sources summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }

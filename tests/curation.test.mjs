@@ -70,7 +70,7 @@ test("short artist wall labels reference existing canonical artists", async () =
   assert.equal(new Set(profiles.map((p) => p.artistSlug)).size, profiles.length);
   for (const p of profiles) {
     assert.ok(records.some((a) => a.artistSlug === p.artistSlug));
-    assert.match(p.lifespan, /^\d{4}–\d{4}$/);
+    assert.match(p.lifespan, /^约?\d{4}–(?:\d{4}(?:年后)?|卒年不详)$/);
     assert.ok(p.description.length < 45);
     assert.equal(new URL(p.sourceUrl).protocol, "https:");
   }
