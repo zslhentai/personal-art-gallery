@@ -53,6 +53,8 @@ test("new licensed artwork retains license, favorites, on-demand viewer and orig
 
 for (const id of ["cma-136760", "met-45434"]) {
   test(`new museum source ${id} loads high resolution on demand and saves the verified original`, async ({ page }) => {
+    // Live image loading (45s) and desktop CORS fallback (30s) are separate waits.
+    test.setTimeout(90000);
     const art = artworks.find((a) => a.id === id)!;
     const originals: string[] = [];
     page.on("request", (request) => { if (request.url() === art.imageUrl) originals.push(request.url()); });
@@ -74,7 +76,9 @@ for (const id of ["cma-136760", "met-45434"]) {
       await result.waitForURL((url) => url.href === art.imageUrl, { waitUntil: "commit" });
       await result.close();
     }
-    await page.getByRole("button", { name: "关闭大图" }).click();
+    await page.bringToFront();
+    await page.keyboard.press("Escape");
+    await expect(page.locator(".pswp")).toHaveCount(0);
     await expect(page).toHaveURL(new RegExp(`/artwork/${art.slug}$`));
   });
 }
